@@ -1,1 +1,1 @@
-console.log("test");
+document.querySelector(".input-location"),document.querySelector(".btn-send-request").addEventListener("click",(()=>{}));

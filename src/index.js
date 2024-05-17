@@ -8,17 +8,61 @@ btnSendRequest.addEventListener('click', () => {
 
     // ** Send api request
 
-    fetch('https://api.weatherapi.com/v1/current.json?key=ba2ccfa3d69b4712b5e74013241405&q=london')
-    .then(function(response) {
+    
 
-        let data = response.json();
-        //data = data.current;
+    sendRequest();
         
-        console.log(data);
-
-    })
 
 });
+
+async function sendRequest() {
+
+    let response = await fetch('https://api.weatherapi.com/v1/current.json?key=ba2ccfa3d69b4712b5e74013241405&q=london&contentType=json');
+    let data = response.json();
+
+    console.log(data);
+    return data;
+
+}
+
+function sendRequest2() {
+
+    const apiRequest = async () => {
+
+        const data = await fetch(
+            'https://api.weatherapi.com/v1/current.json?key=ba2ccfa3d69b4712b5e74013241405&q=london&contentType=json'
+        );
+
+        const weather = await data.json();
+
+        console.log(weather);
+        console.log('1');
+    }
+
+    console.log(apiRequest);
+    return apiRequest;
+
+}
+
+/* 
+
+
+        const data = await fetch('https://api.weatherapi.com/v1/current.json?key=ba2ccfa3d69b4712b5e74013241405&q=london&contentType=json')
+        .then(function(response) {
+    
+            //let data = response.json();
+            //data = data.current;
+            
+            let data = JSON.stringify(response);
+    
+            console.log(data);
+            // console.log(response);   
+    
+        })
+
+    }
+
+*/
 
 
 /*

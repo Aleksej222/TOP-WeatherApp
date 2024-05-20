@@ -10,7 +10,9 @@ btnSendRequest.addEventListener('click', () => {
 
     
 
-    sendRequest();
+    let weatherData = sendRequest();
+
+    console.log(weatherData);  // promise pending
         
 
 });
@@ -18,10 +20,15 @@ btnSendRequest.addEventListener('click', () => {
 async function sendRequest() {
 
     let response = await fetch('https://api.weatherapi.com/v1/current.json?key=ba2ccfa3d69b4712b5e74013241405&q=london&contentType=json');
-    let data = response.json();
+    let data = await response.json();
+
+    // let weatherData = data.current;
+    let { weatherData } = data;
 
     console.log(data);
-    return data;
+    // console.log(weatherData);
+
+    return weatherData;
 
 }
 
@@ -43,6 +50,25 @@ function sendRequest2() {
     return apiRequest;
 
 }
+
+
+/*
+
+    // Returns coordinates and city name for a specified city name.
+    async function getCoords(url) {
+    const response = await fetch(url);
+    const weatherData = await response.json();
+    const { coord } = weatherData;
+    coord.name = weatherData.name;
+    coord.country = weatherData.sys.country;
+    // console.log(weatherData);
+    // console.log(weatherData.weather);
+
+    return coord;
+
+}
+
+*/
 
 /* 
 

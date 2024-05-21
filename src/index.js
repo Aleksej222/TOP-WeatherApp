@@ -7,28 +7,24 @@ btnSendRequest.addEventListener('click', () => {
     // console.log(locationInput.value);
 
     // ** Send api request
-
-    
-
-    sendRequest();
-
-    //console.log(weatherData);  // promise pending
+    if (locationInput.value) {
+        sendRequest(locationInput.value);
+    }
         
-
 });
 
-async function sendRequest() {
+async function sendRequest(location) {
 
-    let response = await fetch('https://api.weatherapi.com/v1/current.json?key=ba2ccfa3d69b4712b5e74013241405&q=london&contentType=json');
+    let requestText = "https://api.weatherapi.com/v1/current.json?key="+apiKey+"&q="+location+"&contentType=json";
+    let response = await fetch(requestText);
     let data = await response.json();
 
     let weatherData = data.current;
   
+    // console.log(data);
     // console.log(weatherData);
 
     setWeather(weatherData);
-
-    // return weatherData;
 
 }
 
@@ -40,6 +36,7 @@ function setWeather(weatherData) {
 
 /*
     TODO: Validate input field
+    TODO: Write error handling (for api calls)
     TODO: Split into several scripts
     TODO: Write proper html and css
 

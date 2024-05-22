@@ -8,12 +8,12 @@ btnSendRequest.addEventListener('click', () => {
 
     // ** Send api request
     if (locationInput.value) {
-        sendRequest(locationInput.value);
+        getCurrentWeather(locationInput.value);
     }
         
 });
 
-async function sendRequest(location) {
+async function getCurrentWeather(location) {
 
     let requestText = "https://api.weatherapi.com/v1/current.json?key="+apiKey+"&q="+location+"&contentType=json";
     let response = await fetch(requestText);

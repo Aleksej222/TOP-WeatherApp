@@ -1,23 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="style.css" type="text/css">
+
     <title>Document</title>
+    
 </head>
+
 <body>
 
-    <div class="container" style="margin-top: 20%; margin-left: 600px;">
+    <div class="fake-container" style="margin-top: 20%; margin-left: 600px;">
 
-            <input type="text" placeholder="Location" class="input-location" style="font-size: 1.8rem;" required>
-            <button class="btn btn-send-request" style="padding: 20px 50px; font-size: 1.4rem;">Search</button>
+        <input type="text" placeholder="Location" class="input-location" style="font-size: 1.8rem;" required>
+        <button class="btn btn-send-request" style="padding: 20px 50px; font-size: 1.4rem;">Search</button>
 
-            <div class="results">
+        <div class="results">
+
+        </div>
+
+    </div>
+
+    <div class="container">
+
+        <!-- Default view -->
+        <div class="content">
+
+            <div class="content-header">
+
+                <!-- Location -->
+
+                <!-- Search bar -->
 
             </div>
 
+            <div class="condition-tables">
+
+                <div class="current-condition">
+
+                </div>
+
+                <div class="precipitation-forecast">
+
+                </div>
+
+            </div>
+
+            <div class="forecast">
+
+            </div>
+
+        </div>
+
+        <!-- Visible if location not found -->
+        <div class="not-found">
+
+        </div>
+
     </div>
-    
+
     <script src="main.js"></script>
 </body>
+
 </html>

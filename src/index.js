@@ -3,15 +3,19 @@ let apiKey = 'ba2ccfa3d69b4712b5e74013241405';
 let locationInput = document.querySelector('.input-location');
 let btnSendRequest = document.querySelector('.btn-send-request');
 
-btnSendRequest.addEventListener('click', () => {
-    // console.log(locationInput.value);
+if (btnSendRequest) {
 
-    // ** Send api request
-    if (locationInput.value) {
-        getCurrentWeather(locationInput.value);
-    }
-        
-});
+    btnSendRequest.addEventListener('click', () => {
+        // console.log(locationInput.value);
+    
+        // ** Send api request
+        if (locationInput.value) {
+            getCurrentWeather(locationInput.value);
+        }
+            
+    });
+
+}
 
 async function getCurrentWeather(location) {
 
@@ -29,7 +33,6 @@ async function getCurrentWeather(location) {
 }
 
 function setWeather(weatherData) {
-
     console.log(weatherData);
 
 }

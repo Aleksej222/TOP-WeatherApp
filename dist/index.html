@@ -13,7 +13,7 @@
 
 <body>
 
-    <div class="fake-container" style="margin-top: 20%; margin-left: 600px;">
+    <!-- <div class="fake-container" style="margin-top: 20%; margin-left: 600px; display: none;">
 
         <input type="text" placeholder="Location" class="input-location" style="font-size: 1.8rem;" required>
         <button class="btn btn-send-request" style="padding: 20px 50px; font-size: 1.4rem;">Search</button>
@@ -22,7 +22,7 @@
 
         </div>
 
-    </div>
+    </div> -->
 
     <div class="container">
 
@@ -31,9 +31,25 @@
 
             <div class="content-header">
 
-                <!-- Location -->
+                 <!-- Location -->
+                <div class="">
+
+                    <!-- Yr.no logo -->
+                    <img src="" alt="site-logo">
+
+                    <div class="location-details">
+                        <span>Location name</span>
+                        <span>Location details</span>
+                    </div>
+
+                </div>
 
                 <!-- Search bar -->
+               <div class="search-bar">
+                    <span>search icon</span>
+                    <input type="text">
+               </div>
+
 
             </div>
 
@@ -41,16 +57,68 @@
 
                 <div class="current-condition">
 
+                    <div>
+                        <span>clock icon</span>
+                        <span>Current conditions</span>
+                    </div>
+
+                    <div class="next-hour-temperature-icon">
+                        <span>temperature icon</span>
+                    </div>
+
+                    <div class="next-hour-conditions">
+
+                        <div class="next-hour-temperature">
+                            <span>thermometer icon</span>
+                            <span>current temperature</span>
+                            
+                            <div class="feels-like">
+                                <span>Feels like</span>
+                                <span>feels like temp</span>
+                            </div>
+
+                        </div>
+
+                        <div class="next-hour-precipitation">
+                            <span>umbrela icon</span>
+                            <span>current precipitation mm</span>
+                            <span>mm</span>
+                        </div>
+
+                        <div class="next-hour-wind">
+                            <span>wind icon</span>
+                            <span>current wind</span>
+                           
+                            <div class="current-wind-value">
+                                <span>how much</span>
+                                <span>wind unit</span>
+                                <span>arrow icon</span>
+                            </div>
+
+                        </div>
+
+                    </div>
+
                 </div>
 
                 <div class="precipitation-forecast">
+
+                    <h2>
+                        <div>
+                            <!-- svg -->
+                            <span>umbrella icon</span>
+                        </div>
+                        Precipitation forecast
+                    </h2>
+
+                    <span>Precipitation state</span>
 
                 </div>
 
             </div>
 
-            <div class="forecast">
-
+            <div class="forecast-table">
+                <span>fake content</span>
             </div>
 
         </div>

@@ -1,3 +1,6 @@
+
+// TODO: On Load: Send default request (location Elverum)
+
 let apiKey = 'ba2ccfa3d69b4712b5e74013241405';
 
 let locationInput = document.querySelector('.input-location');

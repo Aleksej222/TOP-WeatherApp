@@ -20,6 +20,8 @@ if (btnSendRequest) {
 
 }
 
+getCurrentWeather('Elverum');
+
 async function getCurrentWeather(location) {
 
     let requestText = "https://api.weatherapi.com/v1/current.json?key="+apiKey+"&q="+location+"&contentType=json";

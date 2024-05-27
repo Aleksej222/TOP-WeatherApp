@@ -31,3 +31,16 @@ body {
     
     border: 3px solid green;
 }
+
+.condition-tables {
+    display: flex;
+    background-color: rgb(162, 232, 255);
+}
+
+.current-condition {
+    border: 3px solid red;
+}
+
+.precipitation-forecast {
+    border: 3px solid orange;
+}

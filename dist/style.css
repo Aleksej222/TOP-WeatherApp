@@ -16,10 +16,16 @@ body {
 }
 
 .content {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
+    margin: 0;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto auto 70%;
+    height: 100vh;
+    justify-content: center;
+    /* grid-gap: .5em; */
 }
+
+/* ?? Postavit cc 80% width na content, boja 100% (pogledat na yr.no) */
 
 .content-header {
     margin-left: auto;
@@ -43,4 +49,8 @@ body {
 
 .precipitation-forecast {
     border: 3px solid orange;
+}
+
+.forecast-table {
+    border: 3px solid orchid;
 }

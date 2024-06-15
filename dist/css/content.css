@@ -1,0 +1,28 @@
+/* ?? Postavit cc 80% width na content, boja 100% (pogledat na yr.no) */
+.content-header {
+    /* margin-left: auto; */
+    /* margin-right: auto; */
+    padding-top: 2.5em;
+    display: grid;
+    grid-template-columns: 60% 40%;
+    
+
+    border: 3px solid green;
+}
+
+.content-location {
+    display: flex;
+    /* align-items: center; */
+
+    /* background-color: darksalmon; */
+}
+
+.logo-img {
+    width: 100px;
+    height: 50px;
+}
+
+.location-details {
+    display: flex;
+    flex-direction: column;
+}

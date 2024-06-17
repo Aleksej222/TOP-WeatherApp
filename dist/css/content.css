@@ -2,7 +2,7 @@
 .content-header {
     /* margin-left: auto; */
     /* margin-right: auto; */
-    padding-top: 2.5em;
+    padding-top: 2.8em;
     display: grid;
     grid-template-columns: 60% 40%;
     
@@ -30,6 +30,7 @@
 .search-bar {
     display: flex;
     align-items: flex-start;
+    justify-content: flex-end;
 }
 
 .input-search {
@@ -39,4 +40,24 @@
 
 .btn-search {
     padding: .8em 1em;
+}
+
+.condition-tables {
+    padding: 1em 2em;
+    display: flex;
+    justify-content: space-between;
+
+    /* ?? Maybe remove later */
+    background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(228,228,255,1) 0%, rgba(223,249,255,0.9444152661064426) 100%);
+    /* background-color: #ADD8E6; */
+
+}
+
+.current-condition {
+    /* width: 70%; */
+    border: 3px solid red;
+}
+
+.precipitation-forecast {
+    border: 3px solid orange;
 }

@@ -19,25 +19,9 @@ body {
     margin: 0;
     display: grid;
     grid-template-columns: 75%;
-    grid-template-rows: auto auto 70%;
+    grid-template-rows: auto 30% 60%;
     height: 100vh;
     justify-content: center;
     /* grid-gap: .5em; */
 }
 
-.condition-tables {
-    display: flex;
-    background-color: rgb(162, 232, 255);
-}
-
-.current-condition {
-    border: 3px solid red;
-}
-
-.precipitation-forecast {
-    border: 3px solid orange;
-}
-
-.forecast-table {
-    border: 3px solid orchid;
-}

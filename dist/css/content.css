@@ -17,7 +17,7 @@
     /* background-color: darksalmon; */
 }
 
-.logo-img {
+.img-logo {
     width: 100px;
     height: 50px;
 }
@@ -56,6 +56,40 @@
 .current-condition {
     /* width: 70%; */
     border: 3px solid red;
+}
+
+.current-condition .img {
+    width: 65px;
+    height: 30px;
+}
+
+.current-condition-header {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    /* background-color: hotpink; */
+}
+
+.current-condition-main {
+    display: flex;
+    
+    /* height: 100%; */
+    background-color: aqua;
+}
+
+.next-hour-conditions {
+    display: flex;
+    /* background-color: lightcoral; */
+}
+
+.img-current-temp {
+    width: 120px;
+    height: 75px;
+}
+
+.next-hour-temperature {
+    display: flex;
+    /* background-color: firebrick; */
 }
 
 .precipitation-forecast {

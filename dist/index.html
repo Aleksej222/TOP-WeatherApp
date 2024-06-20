@@ -38,12 +38,12 @@
             <div class="content-header">
 
                 <!-- Location -->
-                <div class="content-location">
+                <div class="content-location d-flex">
 
                     <!-- Yr.no logo -->
                     <img src="/icons/site-logo.svg" alt="site-logo" class="img img-logo">
 
-                    <div class="location-details">
+                    <div class="location-details d-flex flex-dir-col">
                         <span class="location-name">Location name</span>
                         <span class="about-location">Location details</span>
                     </div>
@@ -51,7 +51,7 @@
                 </div>
 
                 <!-- Search bar -->
-                <div class="search-bar">
+                <div class="search-bar d-flex">
                     <!-- <input class="input-search" name="text" placeholder="Search" type="search"> -->
                     <input type="text" class="input-search">
                     <button class="btn btn-search">Search</button>
@@ -60,70 +60,72 @@
 
             </div>
 
-            <div class="condition-tables">
+            <div class="condition-tables d-flex">
 
                 <div class="current-condition">
 
-                    <div class="current-condition-header">
+                    <div class="current-condition-header d-flex">
                         <img src="/icons/img-clock.svg" alt="clock image" class="img img-clock">
                         <span>Current conditions</span>
                     </div>
 
-                    <div class="current-condition-main">
+                    <div class="current-condition-main d-flex">
 
                         <div class="next-hour-temperature-icon">
                             <!-- TODO: Replace image later -->
-                            <img src="/icons/img-clock.svg" alt="current temperature image" class="img img-current-temp img-clock">
+                            <img src="/icons/img-clock.svg" alt="current temperature image"
+                                class="img img-current-temp img-clock">
                         </div>
-    
-                        <div class="next-hour-conditions">
-    
-                            <div class="next-hour-temperature">
-                                <img src="/icons/img-thermometer.svg" alt="thermomether image" class="img img-thermometer">
-                                <span class="current-temperature-deg">current temperature <span>temp sign</span></span>
-    
-                                <div class="feels-like">
+
+                        <div class="next-hour-conditions d-flex">
+
+                            <div class="next-hour-temperature d-flex">
+                                <img src="/icons/img-thermometer.svg" alt="thermomether image"
+                                    class="img img-thermometer">
+                                <span class="current-temperature-deg d-flex">current temperature <span>temp
+                                        sign</span></span>
+
+                                <div class="feels-like d-flex">
                                     <span>Feels like</span>
                                     <span>feels like temp</span>
                                 </div>
-    
+
                             </div>
-    
-                            <div class="next-hour-precipitation">
+
+                            <div class="next-hour-precipitation d-flex">
                                 <span>umbrela icon</span>
                                 <span>current precipitation mm</span>
                                 <span>mm</span>
                             </div>
-    
-                            <div class="next-hour-wind">
+
+                            <div class="next-hour-wind d-flex">
                                 <span>wind icon</span>
                                 <span>current wind</span>
-    
-                                <div class="current-wind-value">
+
+                                <div class="current-wind-value d-flex">
                                     <span>how much</span>
                                     <span>wind unit</span>
                                     <span>arrow icon</span>
                                 </div>
-    
+
                             </div>
-    
+
                         </div>
 
                     </div>
 
                 </div>
 
-                <div class="precipitation-forecast">
+                <div class="precipitation-forecast d-flex flex-dir-col">
 
-                    <h2>
-                        <div>
-                            <!-- svg -->
-                            <span>umbrella icon</span>
-                        </div>
-                        Precipitation forecast
-                    </h2>
+                    <div class="precipitation-forecast-header d-flex">
+                        <img src="/icons/img-umbrella.svg" alt="umbrella icon" class="img img-umbrella">
+                        <span>Precipitation forecast</span>
+                    </div>
 
-                    <span>Precipitation state</span>
+                    <div class="precipitation-forecast-main d-flex">
+                        <span>Precipitation state</span>
+                    </div>
 
                 </div>
 

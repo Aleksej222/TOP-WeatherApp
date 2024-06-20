@@ -11,6 +11,19 @@ body {
     font-family: 'Source Code Pro', monospace;
 }
 
+.d-flex {
+    display: flex;
+}
+
+.flex-dir-col {
+    flex-direction: column;
+}
+
+.img-logo {
+    width: 100px;
+    height: 50px;
+}
+
 .container {
     width: 100%;
 }

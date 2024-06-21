@@ -69,4 +69,22 @@
     height: 30px;
 }
 
+/* ?? How does the grid look like */
+.weather-list-header {
+    display: grid;
+    grid-template-columns: 1fr 2fr 2fr .2fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: ". forecast-symbol-header forecast-condition-header .";
+
+    border: 3px solid black;
+}
+
+.forecast-symbol-header {
+    grid-area: forecast-symbol-header;
+}
+
+.forecast-condition-header {
+    grid-area: forecast-condition-header;
+}
+
 /* TODO: Fix width later */

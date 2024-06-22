@@ -91,13 +91,14 @@
     list-style-type: none;
 }
 
+/* TODO: Fix margin/padding */
 .weather-list-item {
     padding: 0;
+    margin: 0;
     display: grid;
     grid-template-columns: 1fr 3fr 3fr;
     grid-template-rows: 1fr;
     grid-template-areas: "forecast-date forecast-symbol-content forecast-condition-content";
-    grid-template-areas: "1 2 3";
     border: 3px solid orange;
 }
 

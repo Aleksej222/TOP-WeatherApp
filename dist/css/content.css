@@ -4,7 +4,7 @@
     /* margin-right: auto; */
     padding-top: 2.8em;
     display: grid;
-    grid-template-columns: 60% 40%;
+    /* grid-template-columns: 60% 40%; */
     
 
     border: 3px solid green;
@@ -69,12 +69,12 @@
     height: 30px;
 }
 
-/* ?? How does the grid look like */
 .weather-list-header {
     display: grid;
-    grid-template-columns: 1fr 2fr 2fr .2fr;
+    /* ?? Maybe better to use '%' */
+    grid-template-columns: 1fr 3fr 3fr;
     grid-template-rows: 1fr;
-    grid-template-areas: ". forecast-symbol-header forecast-condition-header .";
+    grid-template-areas: ". forecast-symbol-header forecast-condition-header";
 
     border: 3px solid black;
 }
@@ -86,5 +86,35 @@
 .forecast-condition-header {
     grid-area: forecast-condition-header;
 }
+
+.weather-list-content {
+    list-style-type: none;
+}
+
+.weather-list-item {
+    padding: 0;
+    display: grid;
+    grid-template-columns: 1fr 3fr 3fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "forecast-date forecast-symbol-content forecast-condition-content";
+    grid-template-areas: "1 2 3";
+    border: 3px solid orange;
+}
+
+.list-item-date {
+    background-color: lime !important;
+    grid-area: forecast-date;
+}
+
+.list-forecast-symbols {
+    background-color: blueviolet;
+    grid-area: forecast-symbol-content;
+}
+
+.list-forecast-item {
+    background-color: hotpink;
+    grid-area: forecast-condition-content;
+}
+
 
 /* TODO: Fix width later */

@@ -104,18 +104,19 @@
 }
 
 .list-item-date {
-    background-color: lime !important;
     grid-area: forecast-date;
+    /* background-color: lime !important; */
 }
 
 .list-forecast-symbols {
-    background-color: blueviolet;
+    list-style-type: none;
     grid-area: forecast-symbol-content;
+    /* background-color: blueviolet; */
 }
 
 .list-forecast-item {
-    background-color: hotpink;
     grid-area: forecast-condition-content;
+    /* background-color: hotpink; */
 }
 
 

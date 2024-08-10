@@ -1,4 +1,4 @@
-
+import { ApiDataObj } from "./ApiDataObj";
 // TODO: On Load: Send default request (location Elverum)
 
 let apiKey = 'ba2ccfa3d69b4712b5e74013241405';
@@ -19,6 +19,10 @@ if (btnSendRequest) {
     });
 
 }
+
+// TODO: Remove later (works)
+let apiObj = new ApiDataObj('current.json', 'Elverum', 10);
+// console.log(apiObj);
 
 getCurrentWeather('Elverum');
 
@@ -48,4 +52,12 @@ function setWeather(weatherData) {
     TODO: Split into several scripts
     TODO: Write proper html and css
 
+    ?? Koje skripte za pocetak: 
+    - searchClicked.js
+    - getLocation.js
+    - makeResponseObj.js
+    - 'current.json', 'future.json', 'forecast.json' etc...
+    - DOM
 */
+
+

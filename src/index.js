@@ -1,63 +1,28 @@
-import { ApiDataObj } from "./ApiDataObj";
-// TODO: On Load: Send default request (location Elverum)
-
-let apiKey = 'ba2ccfa3d69b4712b5e74013241405';
+import { getRequestObj } from "./getRequestObj";
 
 let locationInput = document.querySelector('.input-location');
-let btnSendRequest = document.querySelector('.btn-send-request');
+let btnSendRequest = document.querySelector('.btn-search');
 
 if (btnSendRequest) {
 
     btnSendRequest.addEventListener('click', () => {
-        // console.log(locationInput.value);
-    
-        // ** Send api request
+
         if (locationInput.value) {
-            getCurrentWeather(locationInput.value);
+
+            // TODO: Only send 1 request (forecast) has location, current, forecast
+            // let response = getRequestObj('current.json', locationInput.value);
+            // Only return 3 days
+            let response = getRequestObj('forecast.json', locationInput.value, 5);
+
+            // console.log(response);
+
         }
-            
-    });
-
+    })
 }
 
-// TODO: Remove later (works)
-let apiObj = new ApiDataObj('current.json', 'Elverum', 10);
-// console.log(apiObj);
 
-getCurrentWeather('Elverum');
+// TODO: Set location details (Oslo): Oslo, Norway, 21:30
+// TODO: Validate input field
+// TODO: Write error handling (for api calls)
 
-async function getCurrentWeather(location) {
-
-    let requestText = "https://api.weatherapi.com/v1/current.json?key="+apiKey+"&q="+location+"&contentType=json";
-    let response = await fetch(requestText);
-    let data = await response.json();
-
-    let weatherData = data.current;
-  
-    // console.log(data);
-    // console.log(weatherData);
-
-    setWeather(weatherData);
-
-}
-
-function setWeather(weatherData) {
-    console.log(weatherData);
-
-}
-
-/*
-    TODO: Validate input field
-    TODO: Write error handling (for api calls)
-    TODO: Split into several scripts
-    TODO: Write proper html and css
-
-    ?? Koje skripte za pocetak: 
-    - searchClicked.js
-    - getLocation.js
-    - makeResponseObj.js
-    - 'current.json', 'future.json', 'forecast.json' etc...
-    - DOM
-*/
-
-
+ 

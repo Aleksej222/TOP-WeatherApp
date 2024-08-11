@@ -5,16 +5,16 @@ let btnSendRequest = document.querySelector('.btn-search');
 
 if (btnSendRequest) {
 
-    btnSendRequest.addEventListener('click', () => {
+    btnSendRequest.addEventListener('click', async () => {
 
         if (locationInput.value) {
 
             // TODO: Only send 1 request (forecast) has location, current, forecast
             // let response = getRequestObj('current.json', locationInput.value);
             // Only return 3 days
-            let response = getRequestObj('forecast.json', locationInput.value, 5);
+            let response = await getRequestObj('forecast.json', locationInput.value, 5);
 
-            // console.log(response);
+            console.log(response);
 
         }
     })

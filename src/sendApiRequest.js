@@ -3,7 +3,8 @@ export async function sendApiRequest(requestText) {
     let response = await fetch(requestText);
     let responseObj = await response.json();
 
-    console.log(responseObj);
+    // TODO: If location not found (Error)
+    // console.log(responseObj);
     return responseObj
 
 }

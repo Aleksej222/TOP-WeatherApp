@@ -5,7 +5,7 @@ export function changeDom(responseObj) {
 
     changeLocationDetails(responseObj.location);
     changeCurrentConditions(responseObj.current);
-    changePrecipitationTable(responseObj.forecast);
+    changePrecipitationTable(responseObj.forecast.forecastday[0]);
 
 }
 
@@ -31,6 +31,7 @@ function changeLocationDetails(location) {
 function changeCurrentConditions(current) {
     // console.log(current);
     // ?? Kako postaviti ikonice
+
     
     // TODO: Use span for celsius sign
     // let celsiusSign = document.querySelectorAll('.celsius-sign');
@@ -47,8 +48,15 @@ function changeCurrentConditions(current) {
     
 }
 
+function changePrecipitationTable(forecastToday) {
+    console.log(forecastToday);
 
-function changePrecipitationTable(forecast) {
-    console.log(forecast);
+    let totalPrecipMM = document.querySelector('.total-precip-mm');
 
+    let precipitationState = forecastToday.day.totalprecip_mm;
+    totalPrecipMM.innerHTML = precipitationState;
+    
 }
+
+
+    // TODO: Create function for icon change

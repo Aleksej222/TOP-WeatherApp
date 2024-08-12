@@ -1,8 +1,11 @@
+// ** Function that manipulates DOM
 export function changeDom(responseObj) {
 
-    // console.log(responseObj);
+    console.log(responseObj);
 
     changeLocationDetails(responseObj.location);
+
+    changeCurrentConditions(responseObj.current);
 
 }
 
@@ -24,8 +27,10 @@ function changeLocationDetails(location) {
 
 }
 
+// ** Set current condition table details
 function changeCurrentConditions(current) {
+    console.log(current);
 
-
-
+    // ?? Kako postaviti ikonice
+    
 }

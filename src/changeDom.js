@@ -23,3 +23,9 @@ function changeLocationDetails(location) {
     locationDetails.innerHTML = locationDetailsStr;
 
 }
+
+function changeCurrentConditions(current) {
+
+
+
+}

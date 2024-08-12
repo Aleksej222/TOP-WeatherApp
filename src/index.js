@@ -13,6 +13,7 @@ if (btnSendRequest) {
             // Only returns 3 days
             let responseObj = await getRequestObj('forecast.json', locationInput.value, 5)
 
+            locationInput.value = '';  // ** Set input field to blank 
             // console.log(responseObj);
 
             changeDom(responseObj);
@@ -21,7 +22,17 @@ if (btnSendRequest) {
     })
 }
 
-// TODO: Validate input field
+// ** Send api request when it loads
+function sendRequestOnLoad() {
+
+    locationInput.value = 'Elverum';
+    btnSendRequest.click();
+    
+}
+
+sendRequestOnLoad();
+
+// TODO: Validate input field (no numbers, char limit...)
 // TODO: Write error handling (for api calls)
 
  

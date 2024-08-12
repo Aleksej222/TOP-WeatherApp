@@ -6,6 +6,7 @@ export function changeDom(responseObj) {
     changeLocationDetails(responseObj.location);
     changeCurrentConditions(responseObj.current);
     changePrecipitationTable(responseObj.forecast.forecastday[0]);
+    changeForecastTable(responseObj.forecast.forecastday);
 
 }
 
@@ -49,12 +50,19 @@ function changeCurrentConditions(current) {
 }
 
 function changePrecipitationTable(forecastToday) {
-    console.log(forecastToday);
+    // console.log(forecastToday);
 
     let totalPrecipMM = document.querySelector('.total-precip-mm');
 
     let precipitationState = forecastToday.day.totalprecip_mm;
     totalPrecipMM.innerHTML = precipitationState;
+    
+}
+
+function changeForecastTable(forecast) {
+    console.log(forecast);
+
+
     
 }
 

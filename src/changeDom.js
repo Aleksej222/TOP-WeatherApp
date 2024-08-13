@@ -60,11 +60,61 @@ function changePrecipitationTable(forecastToday) {
 }
 
 function changeForecastTable(forecast) {
-    console.log(forecast);
+    // console.log(forecast);
+    let forecastList = document.querySelector('.weather-list-content');
+    // console.log(forecastList);
 
+    forecast.forEach(day => {
+        // console.log(day);
+        
+        let forecastItem = createWeatherListItem(day);
+        // console.log(forecastItem);
+
+        forecastList.appendChild(forecastItem);
+
+        // ** Everything goes to '.weather-list-item'
+        
+        
+    });
+    
+    // TODO: Create span element, set date
+    // TODO: Get day of the week (Sunday = 0)
+    // const d = new Date();
+    // let day1 = d.getDay();
 
     
 }
 
+function createWeatherListItem(day) {
+    console.log(day);
+
+    let listItem = document.createElement('li');
+    listItem.classList.add('weather-list-item');
+
+    let listItemDateDiv = document.createElement('div');
+    listItemDateDiv.classList.add('list-item-date')
+    
+    let listItemDateSpan = document.createElement('span');
+    listItemDateSpan.innerHTML = day.date;
+
+    listItemDateDiv.appendChild(listItemDateSpan);
+
+    /*
+         <ol class="list-forecast-symbols d-flex">
+                            <li class="list-forecast-symbol-morning"><span>test</span></li>
+                            <li class="list-forecast-symbol-afternoon"><span>test</span></li>
+                            <li class="list-forecast-symbol-evening"><span>test</span></li>
+                            <li class="list-forecast-symbol-night"><span>test</span></li>
+        </ol>
+    */
+
+    listItem.appendChild(listItemDateDiv);
+
+    return listItem;
+
+}
+
 
     // TODO: Create function for icon change
+    // TODO: Create function for dates
+    // TODO: Change month number to month text

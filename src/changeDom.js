@@ -31,8 +31,13 @@ function changeLocationDetails(location) {
 // ** Set current condition table details
 function changeCurrentConditions(current) {
     // console.log(current);
-    // ?? Kako postaviti ikonice
+    
 
+    let tempIcon = document.querySelector('.img-current-temp');
+
+    let tempText = current.condition.text;
+    let imgSrc = setWeatherIcon(tempText);
+    tempIcon.src = imgSrc;
     
     // TODO: Use span for celsius sign
     // let celsiusSign = document.querySelectorAll('.celsius-sign');
@@ -113,10 +118,15 @@ function createWeatherListItem(day) {
         listSymbolLi.classList.add('symbol-'+symbolsArr[i]);
 
         // TODO: Replace with icons later
-        let listSymbolSpan = document.createElement('span');
-        listSymbolSpan.innerHTML = symbolsArr[i];
+        let listSymbolImg = document.createElement('image');
+        listSymbolImg.classList.add('image');
 
-        listSymbolLi.appendChild(listSymbolSpan);
+        // TODO: Send different hours for each part of the day
+        // let imgSrc = setWeatherIcon(day.day.condition.text);
+        // listSymbolImg.setAttribute('src', imgSrc);
+        // listSymbolImg.innerHTML = symbolsArr[i];
+
+        listSymbolLi.appendChild(listSymbolImg);
         listSymbolsContainerOl.appendChild(listSymbolLi);
     }
 
@@ -161,5 +171,24 @@ function createWeatherListItem(day) {
 }
 
 
-    // TODO: Create function for icon change
-    // TODO: Create function for dates
+// TODO: Create function for icon change
+// TODO: Create function for dates
+
+
+
+function setWeatherIcon(tempText) {
+    // console.log(tempText);
+
+    let imgSrc = '';
+
+    switch (tempText) {
+
+        case (tempText):
+            imgSrc = '/icons/weather-conditions/sunny.svg';
+            break;
+            
+    }
+
+    return imgSrc;
+    
+}

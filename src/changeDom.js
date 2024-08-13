@@ -94,21 +94,67 @@ function createWeatherListItem(day) {
     let listItemDateDiv = document.createElement('div');
     listItemDateDiv.classList.add('list-item-date')
     
+    // TODO: Change month number to month text
     let listItemDateSpan = document.createElement('span');
     listItemDateSpan.innerHTML = day.date;
 
     listItemDateDiv.appendChild(listItemDateSpan);
 
-    /*
-         <ol class="list-forecast-symbols d-flex">
-                            <li class="list-forecast-symbol-morning"><span>test</span></li>
-                            <li class="list-forecast-symbol-afternoon"><span>test</span></li>
-                            <li class="list-forecast-symbol-evening"><span>test</span></li>
-                            <li class="list-forecast-symbol-night"><span>test</span></li>
-        </ol>
-    */
+    let listSymbolsContainerOl = document.createElement('ol');
+    listSymbolsContainerOl.classList.add('list-forecast-symbols');
+    listSymbolsContainerOl.classList.add('d-flex');
+
+    let symbolsArr = ['morning', 'afternoon', 'evening', 'night'];
+    
+    for (let i = 0; i < symbolsArr.length; i++) {
+
+        let listSymbolLi = document.createElement('li');
+        listSymbolLi.classList.add('list-forecast-symbol');
+        listSymbolLi.classList.add('symbol-'+symbolsArr[i]);
+
+        // TODO: Replace with icons later
+        let listSymbolSpan = document.createElement('span');
+        listSymbolSpan.innerHTML = symbolsArr[i];
+
+        listSymbolLi.appendChild(listSymbolSpan);
+        listSymbolsContainerOl.appendChild(listSymbolLi);
+    }
+
+    let forecastItemDiv = document.createElement('div');
+    forecastItemDiv.classList.add('list-forecast-item');
+    forecastItemDiv.classList.add('d-flex');
+
+    let itemTempDiv = document.createElement('div');
+    itemTempDiv.classList.add('list-item-temperature');
+
+    // TODO: Fix formating later
+    let itemTempSpan = document.createElement('span');
+    itemTempSpan.innerHTML = day.day.maxtemp_c + '&deg / ' + day.day.mintemp_c + '&deg';
+
+    itemTempDiv.appendChild(itemTempSpan);
+    forecastItemDiv.appendChild(itemTempDiv);
+
+    let itemPrecipDiv = document.createElement('div');
+    itemPrecipDiv.classList.add('list-item-precip');
+
+    let itemPrecipSpan = document.createElement('span');
+    itemPrecipSpan.innerHTML = day.day.totalprecip_mm;
+
+    itemPrecipDiv.appendChild(itemPrecipSpan);
+    forecastItemDiv.appendChild(itemPrecipDiv);
+
+    let itemWindDiv = document.createElement('div');
+    itemWindDiv.classList.add('list-item-wind');
+
+    let itemWindSpan = document.createElement('span');
+    itemWindSpan.innerHTML = day.day.maxwind_kph;
+
+    itemWindDiv.appendChild(itemWindSpan);
+    forecastItemDiv.appendChild(itemWindDiv);
 
     listItem.appendChild(listItemDateDiv);
+    listItem.appendChild(listSymbolsContainerOl);
+    listItem.appendChild(forecastItemDiv);
 
     return listItem;
 
@@ -117,4 +163,3 @@ function createWeatherListItem(day) {
 
     // TODO: Create function for icon change
     // TODO: Create function for dates
-    // TODO: Change month number to month text

@@ -177,16 +177,23 @@ function createWeatherListItem(day) {
 
 
 function setWeatherIcon(tempText) {
-    // console.log(tempText);
+    console.log(tempText);
 
     let imgSrc = '';
 
+    // ?? Kako nac koja ikona treba ic
+    let iconCloudy = ['cloud', 'cloudy', 'mist', ];
+    let iconRain = ['rain', 'rainy'];
+
     switch (tempText) {
 
-        case (tempText):
+        case 'sunny':
             imgSrc = '/icons/weather-conditions/sunny.svg';
             break;
             
+        default:
+            imgSrc = '/icons/weather-conditions/sunny.svg';
+            break;
     }
 
     return imgSrc;

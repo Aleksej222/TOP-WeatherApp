@@ -91,7 +91,7 @@ function changeForecastTable(forecast) {
 }
 
 function createWeatherListItem(day) {
-    console.log(day);
+    // console.log(day);
 
     let listItem = document.createElement('li');
     listItem.classList.add('weather-list-item');
@@ -177,12 +177,34 @@ function createWeatherListItem(day) {
 
 
 function setWeatherIcon(tempText) {
-    console.log(tempText);
+    // console.log(tempText);
 
     let imgSrc = '';
+    let wordFound = false;
 
     // ?? Kako nac koja ikona treba ic
-    let iconCloudy = ['cloud', 'cloudy', 'mist', ];
+
+    // TODO: Change later to real sunny conditions
+    let iconSunnyArr = ['sunny', 'mist', 'fog'];
+    wordFound = wordFoundInArray(tempText, iconSunnyArr);
+
+    if (wordFound) {
+
+        imgSrc = '/icons/weather-conditions/sunny.svg';
+
+    }
+
+    // ?? How to do this with if statements    
+
+    else {
+
+        // ** Default icon is cloud
+        imgSrc = '/icons/weather-conditions/cloudy.svg';
+
+    }
+   
+   
+    /*
     let iconRain = ['rain', 'rainy'];
 
     switch (tempText) {
@@ -196,6 +218,20 @@ function setWeatherIcon(tempText) {
             break;
     }
 
+    */
+
     return imgSrc;
     
+}
+
+
+function wordFoundInArray(textSent, conditionsArr) {
+
+    let wordFound = false;
+    let wordsArr = textSent.toLowerCase().split(' ');
+
+    wordFound = wordsArr.some(word=> conditionsArr.includes(word));
+
+    return wordFound;
+
 }

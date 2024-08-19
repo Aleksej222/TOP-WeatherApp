@@ -180,58 +180,48 @@ function setWeatherIcon(tempText) {
     // console.log(tempText);
 
     let imgSrc = '';
-    let wordFound = false;
-
+    let conditionFoundAt = -1;
+  
     // ?? Kako nac koja ikona treba ic
 
     // TODO: Change later to real sunny conditions
-    let iconSunnyArr = ['sunny', 'mist', 'fog'];
-    wordFound = wordFoundInArray(tempText, iconSunnyArr);
+    let conditionsArr = [['sun', 'sunny'], ['rain', 'rainy']];
 
-    if (wordFound) {
+    let arrSent = tempText.toLowerCase().split(' ');
 
-        imgSrc = '/icons/weather-conditions/sunny.svg';
 
-    }
+    conditionFoundAt = findPositionInArr(arrSent, conditionsArr);
 
-    // ?? How to do this with if statements    
+    switch (conditionFoundAt) {
 
-    else {
-
-        // ** Default icon is cloud
-        imgSrc = '/icons/weather-conditions/cloudy.svg';
-
-    }
-   
-   
-    /*
-    let iconRain = ['rain', 'rainy'];
-
-    switch (tempText) {
-
-        case 'sunny':
+        case 0:  
+            // sunny
             imgSrc = '/icons/weather-conditions/sunny.svg';
             break;
             
         default:
+            // cloudy
             imgSrc = '/icons/weather-conditions/sunny.svg';
             break;
     }
 
-    */
-
+    // ?? Return object with imgSrc and alt text
     return imgSrc;
     
 }
 
+function findPositionInArr(arrSent, conditionsArr) {
 
-function wordFoundInArray(textSent, conditionsArr) {
+    // console.log(arrSent);
 
-    let wordFound = false;
-    let wordsArr = textSent.toLowerCase().split(' ');
+    let foundAt = -1;
 
-    wordFound = wordsArr.some(word=> conditionsArr.includes(word));
+    for (var i = 0; i < arrSent.length; i++) {
 
-    return wordFound;
+        
+     
+    }
+
+    return foundAt;
 
 }

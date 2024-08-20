@@ -91,7 +91,7 @@ function changeForecastTable(forecast) {
 }
 
 function createWeatherListItem(day) {
-    console.log(day);
+    // console.log(day);
 
     let listItem = document.createElement('li');
     listItem.classList.add('weather-list-item');
@@ -175,23 +175,19 @@ function createWeatherListItem(day) {
 // TODO: Create function for dates
 
 
-
+// ** Function that sends icon src depending on weather condition
 function setWeatherIcon(tempText) {
     console.log(tempText);
 
+    // Array that contains weather conditions
+    let conditionsArr = [['sun', 'sunny'], ['rain', 'rainy'], ['thunder', 'lightning'], ['snow', 'snowing']];
+
     let imgSrc = '';
     let conditionFoundAt = -1;
-  
-    // ?? Kako nac koja ikona treba ic
-
-    // TODO: Change later to real sunny conditions
-    let conditionsArr = [['sun', 'sunny'], ['rain', 'rainy']];
 
     let arrSent = tempText.toLowerCase().split(' ');
 
     conditionFoundAt = findPosition(arrSent, conditionsArr);
-
-    console.log(conditionFoundAt);
 
     switch (conditionFoundAt) {
 
@@ -201,12 +197,23 @@ function setWeatherIcon(tempText) {
             break;
 
         case 1:
-            //
-            // imgSrc = 
-            
+            // rain
+            imgSrc = '/icons/weather-conditions/rain.svg';
+            break;
+
+        case 2:
+            // thunder
+            imgSrc = '/icons/weather-conditions/thunder.svg';
+            break;
+
+        case 3:
+            // snow
+            imgSrc = '/icons/weather-conditions/snow.svg';
+            break;
+
         default:
             // cloudy
-            imgSrc = '/icons/weather-conditions/sunny.svg';
+            imgSrc = '/icons/weather-conditions/cloudy.svg';
             break;
     }
 

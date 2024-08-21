@@ -32,6 +32,8 @@ function sendRequestOnLoad() {
 
 sendRequestOnLoad();
 
+// TODO: Fix HTML (delete unneccesary code)
+// TODO: Comment every function
 // TODO: Validate input field (no numbers, char limit...)
 // TODO: Write error handling (for api calls)
 

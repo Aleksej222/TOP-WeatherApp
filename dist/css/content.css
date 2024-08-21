@@ -119,5 +119,9 @@
     /* background-color: hotpink; */
 }
 
+.img-forecast {
+    width: 40 !important;
+    height: 40 !important;
+}
 
 /* TODO: Fix width later */

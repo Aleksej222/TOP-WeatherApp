@@ -10,8 +10,6 @@ export function changeDom(responseObj) {
 
 }
 
-// TODO: Split into minor scripts
-
 // ** Set location details (Oslo): Oslo, Norway, 21:30
 function changeLocationDetails(location) {
     // console.log(location);
@@ -117,15 +115,42 @@ function createWeatherListItem(day) {
         listSymbolLi.classList.add('list-forecast-symbol');
         listSymbolLi.classList.add('symbol-'+symbolsArr[i]);
 
-        // TODO: Replace with icons later
-        let listSymbolImg = document.createElement('image');
-        listSymbolImg.classList.add('image');
+        // let listSymbolImg = document.createElement('image');
+        let listSymbolImg = new Image(40, 40);
+        listSymbolImg.classList.add('img');
+        listSymbolImg.classList.add('img-forecast');
+
+        let conditionText = '';
+
+        switch (symbolsArr[i]) {
+            case 'morning':
+                // morning (08:00)
+                conditionText = day.hour[8].condition.text;
+                break;
+            
+            case 'afternoon':
+                // afternoon (12:00)
+                conditionText = day.hour[12].condition.text;
+                break;
+
+            case 'evening':
+                // evening (18:00)
+                conditionText = day.hour[18].condition.text;
+                break
+        
+            default:
+                // night (22:00)
+                conditionText = day.hour[22].condition.text;
+                break;
+        }
 
         // TODO: Send different hours for each part of the day
-        // let imgSrc = setWeatherIcon(day.day.condition.text);
-        // listSymbolImg.setAttribute('src', imgSrc);
-        // listSymbolImg.innerHTML = symbolsArr[i];
+        let imgSrc = setWeatherIcon(conditionText);
 
+        // listSymbolImg.src = imgSrc;
+        listSymbolImg.setAttribute('src', imgSrc);
+        console.log(listSymbolImg);
+        
         listSymbolLi.appendChild(listSymbolImg);
         listSymbolsContainerOl.appendChild(listSymbolLi);
     }
@@ -170,14 +195,9 @@ function createWeatherListItem(day) {
 
 }
 
-
-// TODO: Create function for icon change
-// TODO: Create function for dates
-
-
 // ** Function that sends icon src depending on weather condition
 function setWeatherIcon(tempText) {
-    console.log(tempText);
+    // console.log(tempText);
 
     // Array that contains weather conditions
     let conditionsArr = [['sun', 'sunny'], ['rain', 'rainy'], ['thunder', 'lightning'], ['snow', 'snowing']];
@@ -245,3 +265,7 @@ function findPosition(arr1, arr2) {
     // Return -1 if no element from arr1 is found in arr2
     return -1;
 }
+
+
+// TODO: Split into minor scripts
+// TODO: Create function for dates

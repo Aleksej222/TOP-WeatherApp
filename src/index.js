@@ -1,5 +1,6 @@
 import { getRequestObj } from "./getRequestObj";
 import { changeDom } from "./changeDom";
+import { validateLocationInput } from "./validateLocationInput";
 
 let locationInput = document.querySelector('.input-location');
 let btnSendRequest = document.querySelector('.btn-search');
@@ -8,7 +9,10 @@ if (btnSendRequest) {
 
     btnSendRequest.addEventListener('click', async () => {
 
-        if (locationInput.value) {
+        let locationInputValid = false;
+        locationInputValid = validateLocationInput(locationInput.value);
+
+        if (locationInputValid) {
             
             // Only returns 3 days
             let responseObj = await getRequestObj('forecast.json', locationInput.value, 5)
@@ -32,9 +36,7 @@ function sendRequestOnLoad() {
 
 sendRequestOnLoad();
 
-// TODO: Fix HTML (delete unneccesary code)
 // TODO: Comment every function
-// TODO: Validate input field (no numbers, char limit...)
 // TODO: Write error handling (for api calls)
 
  

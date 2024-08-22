@@ -272,4 +272,5 @@ function findPosition(arr1, arr2) {
 
 
 // TODO: Split into minor scripts
-// TODO: Create function for dates
+// TODO: Set day/date for forecast list items (Friday 23. Aug.)
+// TODO: Enable search on 'Enter' key press

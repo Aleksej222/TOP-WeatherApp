@@ -67,11 +67,14 @@ function changeForecastTable(forecast) {
 
     let forecastTable = document.querySelector('.forecast-table');
 
-    // ol is used on yr.no
-    let forecastList = document.createElement('ol');
-    forecastList.classList.add('weather-list-content');
+    let forecastList = document.querySelector('.weather-list-content');
+    if (forecastList) {
+        forecastTable.removeChild(forecastList);
+    }
 
-    // forecastList.innerHTML = '';
+    // ol is used on yr.no
+    forecastList = document.createElement('ol');
+    forecastList.classList.add('weather-list-content');
 
     forecast.forEach(day => {
         // console.log(day);
@@ -83,7 +86,6 @@ function changeForecastTable(forecast) {
 
         // ** Everything goes to '.weather-list-item'
         
-        
     });
     
     // TODO: Create span element, set date
@@ -92,7 +94,6 @@ function changeForecastTable(forecast) {
     // let day1 = d.getDay();
 
     forecastTable.appendChild(forecastList);
-
 }
 
 function createWeatherListItem(day) {
@@ -272,4 +273,3 @@ function findPosition(arr1, arr2) {
 
 // TODO: Split into minor scripts
 // TODO: Create function for dates
-// !! Bug: New search creates new list elements but doesn't delete old ones

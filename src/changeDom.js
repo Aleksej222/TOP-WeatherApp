@@ -64,8 +64,14 @@ function changePrecipitationTable(forecastToday) {
 
 function changeForecastTable(forecast) {
     // console.log(forecast);
-    let forecastList = document.querySelector('.weather-list-content');
-    // console.log(forecastList);
+
+    let forecastTable = document.querySelector('.forecast-table');
+
+    // ol is used on yr.no
+    let forecastList = document.createElement('ol');
+    forecastList.classList.add('weather-list-content');
+
+    // forecastList.innerHTML = '';
 
     forecast.forEach(day => {
         // console.log(day);
@@ -85,7 +91,8 @@ function changeForecastTable(forecast) {
     // const d = new Date();
     // let day1 = d.getDay();
 
-    
+    forecastTable.appendChild(forecastList);
+
 }
 
 function createWeatherListItem(day) {
@@ -144,12 +151,8 @@ function createWeatherListItem(day) {
                 break;
         }
 
-        // TODO: Send different hours for each part of the day
         let imgSrc = setWeatherIcon(conditionText);
-
-        // listSymbolImg.src = imgSrc;
         listSymbolImg.setAttribute('src', imgSrc);
-        console.log(listSymbolImg);
         
         listSymbolLi.appendChild(listSymbolImg);
         listSymbolsContainerOl.appendChild(listSymbolLi);
@@ -269,3 +272,4 @@ function findPosition(arr1, arr2) {
 
 // TODO: Split into minor scripts
 // TODO: Create function for dates
+// !! Bug: New search creates new list elements but doesn't delete old ones

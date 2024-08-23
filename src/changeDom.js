@@ -36,8 +36,11 @@ function changeCurrentConditions(current) {
     let tempIcon = document.querySelector('.img-current-temp');
 
     let tempText = current.condition.text;
-    let imgSrc = setWeatherIcon(tempText);
-    tempIcon.src = imgSrc;
+    let imgObj = setWeatherIcon(tempText);
+
+    // console.log(imgObj.src);
+    tempIcon.src = imgObj.src;
+    tempIcon.alt = imgObj.alt;
     
     let currentTemp = document.querySelector('.current-temperature-deg');
     let feelsLikeTemp = document.querySelector('.feels-like-temperature-deg');
@@ -97,7 +100,6 @@ function createWeatherListItem(day) {
     let listItemDateDiv = document.createElement('div');
     listItemDateDiv.classList.add('list-item-date')
     
-    // TODO: Change month number to month text
     let listItemDateSpan = document.createElement('span');
 
     let dayDateText = setDateText(day.date);
@@ -146,8 +148,10 @@ function createWeatherListItem(day) {
                 break;
         }
 
-        let imgSrc = setWeatherIcon(conditionText);
-        listSymbolImg.setAttribute('src', imgSrc);
+        let imgObj = setWeatherIcon(conditionText);
+
+        listSymbolImg.setAttribute('src', imgObj.src);
+        listSymbolImg.setAttribute('alt', imgObj.alt);
         
         listSymbolLi.appendChild(listSymbolImg);
         listSymbolsContainerOl.appendChild(listSymbolLi);
@@ -193,14 +197,17 @@ function createWeatherListItem(day) {
 
 }
 
-// ** Function that sends icon src depending on weather condition
+// ** Function that sends image object with src and alt depending on weather condition
 function setWeatherIcon(tempText) {
     // console.log(tempText);
 
+    let imgObj = {src: '', alt:''};
+
     // Array that contains weather conditions
-    let conditionsArr = [['sun', 'sunny'], ['rain', 'rainy'], ['thunder', 'lightning'], ['snow', 'snowing']];
+    const conditionsArr = [['sun', 'sunny'], ['rain', 'rainy'], ['thunder', 'lightning'], ['snow', 'snowing']];
 
     let imgSrc = '';
+    let imgAlt = ''
     let conditionFoundAt = -1;
 
     let arrSent = tempText.toLowerCase().split(' ');
@@ -212,35 +219,42 @@ function setWeatherIcon(tempText) {
         case 0:  
             // sunny
             imgSrc = '/icons/weather-conditions/sunny.svg';
+            imgAlt = 'Image of the sun';
             break;
 
         case 1:
             // rain
             imgSrc = '/icons/weather-conditions/rain.svg';
+            imgAlt = 'Image of the rain';
             break;
 
         case 2:
             // thunder
             imgSrc = '/icons/weather-conditions/thunder.svg';
+            imgAlt = 'Image of the thunder';
             break;
 
         case 3:
             // snow
             imgSrc = '/icons/weather-conditions/snow.svg';
+            imgAlt = 'Image of the snow';
             break;
 
         default:
             // cloudy
             imgSrc = '/icons/weather-conditions/cloudy.svg';
+            imgAlt = 'Image of the cloud';
             break;
     }
 
+    imgObj.src = imgSrc;
+    imgObj.alt = imgAlt;
+    
     // ?? Return object with imgSrc and alt text
-    return imgSrc;
+    return imgObj;
     
 }
 
 
 // TODO: Set alt text on images
-// TODO: Set day/date for forecast list items (Friday 23. Aug.)
 // TODO: Enable search on 'Enter' key press

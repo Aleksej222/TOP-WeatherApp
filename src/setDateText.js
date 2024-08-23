@@ -3,13 +3,14 @@ export function setDateText(date) {
     // console.log(date);
 
     let dateText = ''
-    // let dateArr = date.split('-');
-    // dateArr.shift();  // Remove year from the array
 
     let dayText = getDayOfTheWeek(date);
     let monthText = getMonth(date);
 
-    dateText = dayText + ' ' + monthText;
+    let dateArr = date.split('-');
+    let dateNr = dateArr.pop();
+
+    dateText = dayText + ' ' + dateNr + ' ' + monthText;
     
     return dateText;
 
@@ -38,14 +39,15 @@ function getDayOfTheWeek(date) {
     return dayText;
 }
 
-
+// ** Return month text
 function getMonth(date) {
     let monthText = '';
-    const month = ["Jan.","Feb.","March","April","May","June","July","Aug.","Sep.","Oct.","Nov.","Dec."];
+    const monthsArr = ["Jan.","Feb.","March","April","May","June","July","Aug.","Sep.","Oct.","Nov.","Dec."];
 
-    
+    let todaysDate = new Date();
+    let month = todaysDate.getMonth();
+
+    monthText = monthsArr[month];
 
     return monthText;
 }
-
-// TODO: If todayTrue set Today instead of 'Monday'

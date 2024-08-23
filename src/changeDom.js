@@ -1,4 +1,5 @@
 import { findPositionInArr } from "./findPositionInArr";
+import { setDateText } from "./setDateText";
 
 // ** Function that manipulates DOM
 export function changeDom(responseObj) {
@@ -83,11 +84,6 @@ function changeForecastTable(forecast) {
         forecastList.appendChild(forecastItem);
     });
     
-    // TODO: Create span element, set date
-    // TODO: Get day of the week (Sunday = 0)
-    // const d = new Date();
-    // let day1 = d.getDay();
-
     forecastTable.appendChild(forecastList);
 }
 
@@ -103,7 +99,9 @@ function createWeatherListItem(day) {
     
     // TODO: Change month number to month text
     let listItemDateSpan = document.createElement('span');
-    listItemDateSpan.innerHTML = day.date;
+
+    let dayDateText = setDateText(day.date);
+    listItemDateSpan.innerHTML = dayDateText;
 
     listItemDateDiv.appendChild(listItemDateSpan);
 
@@ -243,5 +241,6 @@ function setWeatherIcon(tempText) {
 }
 
 
+// TODO: Set alt text on images
 // TODO: Set day/date for forecast list items (Friday 23. Aug.)
 // TODO: Enable search on 'Enter' key press

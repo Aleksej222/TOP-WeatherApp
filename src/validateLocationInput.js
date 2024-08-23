@@ -1,3 +1,4 @@
+// ** Validate location input string
 export function validateLocationInput(locationInput) {
     let locationInputValid = false;
 
@@ -9,7 +10,6 @@ export function validateLocationInput(locationInput) {
 
     return locationInputValid;
 }
-
 
 function stringIsValid(str) {
     

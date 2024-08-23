@@ -1,6 +1,6 @@
 import { ApiDataObj } from "./ApiDataObj";
-import { sendApiRequest } from "./sendApiRequest";
 
+// ** Function returns weather object
 export async function getRequestObj(apiMethod, location, days = 0) {
 
     let apiDataObj = new ApiDataObj(apiMethod, location, days);
@@ -10,4 +10,16 @@ export async function getRequestObj(apiMethod, location, days = 0) {
     // console.log(requestObj);
 
     return requestObj;
+}
+
+// ** Send api request
+async function sendApiRequest(requestText) {
+
+    let response = await fetch(requestText);
+    let responseObj = await response.json();
+
+    // TODO: If location not found (Error)
+    // console.log(responseObj);
+    return responseObj
+
 }

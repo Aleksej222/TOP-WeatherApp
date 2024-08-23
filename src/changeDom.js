@@ -1,3 +1,5 @@
+import { findPositionInArr } from "./findPositionInArr";
+
 // ** Function that manipulates DOM
 export function changeDom(responseObj) {
 
@@ -30,21 +32,17 @@ function changeLocationDetails(location) {
 function changeCurrentConditions(current) {
     // console.log(current);
     
-
     let tempIcon = document.querySelector('.img-current-temp');
 
     let tempText = current.condition.text;
     let imgSrc = setWeatherIcon(tempText);
     tempIcon.src = imgSrc;
     
-    // TODO: Use span for celsius sign
-    // let celsiusSign = document.querySelectorAll('.celsius-sign');
     let currentTemp = document.querySelector('.current-temperature-deg');
     let feelsLikeTemp = document.querySelector('.feels-like-temperature-deg');
     let currentPrecipitation = document.querySelector('.current-precipitation-mm');
     let windKpH = document.querySelector('.current-wind-kph');
 
-    // celsiusSign.innerHTML = '&deg';
     currentTemp.innerHTML = current.temp_c + '&deg';
     feelsLikeTemp.innerHTML = current.feelslike_c + '&deg';
     currentPrecipitation.innerHTML = current.precip_mm;
@@ -52,6 +50,7 @@ function changeCurrentConditions(current) {
     
 }
 
+// ** Set daily precipitation levels
 function changePrecipitationTable(forecastToday) {
     // console.log(forecastToday);
 
@@ -62,6 +61,7 @@ function changePrecipitationTable(forecastToday) {
     
 }
 
+// ** Change forecast table details 
 function changeForecastTable(forecast) {
     // console.log(forecast);
 
@@ -77,15 +77,10 @@ function changeForecastTable(forecast) {
     forecastList.classList.add('weather-list-content');
 
     forecast.forEach(day => {
-        // console.log(day);
-        
         let forecastItem = createWeatherListItem(day);
         // console.log(forecastItem);
 
         forecastList.appendChild(forecastItem);
-
-        // ** Everything goes to '.weather-list-item'
-        
     });
     
     // TODO: Create span element, set date
@@ -96,6 +91,7 @@ function changeForecastTable(forecast) {
     forecastTable.appendChild(forecastList);
 }
 
+// ** Creates html for an item in the forecast table
 function createWeatherListItem(day) {
     // console.log(day);
 
@@ -211,7 +207,7 @@ function setWeatherIcon(tempText) {
 
     let arrSent = tempText.toLowerCase().split(' ');
 
-    conditionFoundAt = findPosition(arrSent, conditionsArr);
+    conditionFoundAt = findPositionInArr(arrSent, conditionsArr);
 
     switch (conditionFoundAt) {
 
@@ -246,31 +242,6 @@ function setWeatherIcon(tempText) {
     
 }
 
-function findPosition(arr1, arr2) {
-    // Iterate through each element of the 1D array
-    for (let i = 0; i < arr1.length; i++) {
-        const element = arr1[i];
-        
-        // Iterate through each sub-array in the 2D array
-        for (let j = 0; j < arr2.length; j++) {
-            const subArray = arr2[j];
-            
-            // Check if the element exists in the current sub-array
-            const colIndex = subArray.indexOf(element);
-            if (colIndex !== -1) {
-                // Return the position [row, column] if found
-                // return [j, colIndex];
 
-                return j;
-            }
-        }
-    }
-    
-    // Return -1 if no element from arr1 is found in arr2
-    return -1;
-}
-
-
-// TODO: Split into minor scripts
 // TODO: Set day/date for forecast list items (Friday 23. Aug.)
 // TODO: Enable search on 'Enter' key press

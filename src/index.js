@@ -1,4 +1,4 @@
-import { getRequestObj } from "./getRequestObj";
+import { getRequestObj } from "./apiFunctions";
 import { changeDom } from "./changeDom";
 import { validateLocationInput } from "./validateLocationInput";
 
@@ -36,7 +36,6 @@ function sendRequestOnLoad() {
 
 sendRequestOnLoad();
 
-// TODO: Comment every function
 // TODO: Write error handling (for api calls)
 
  

@@ -16,20 +16,7 @@
 </head>
 
 <body>
-
-    <!-- <div class="fake-container" style="margin-top: 20%; margin-left: 600px; display: none;">
-
-        <input type="text" placeholder="Location" class="input-location" style="font-size: 1.8rem;" required>
-        <button class="btn btn-send-request" style="padding: 20px 50px; font-size: 1.4rem;">Search</button>
-
-        <div class="results">
-
-        </div>
-
-    </div> -->
-
-
-    <!-- TODO: Begin with grid display -->
+    <!-- TODO: Display grid -->
     <div class="container">
 
         <!-- Default view -->
@@ -52,11 +39,9 @@
 
                 <!-- Search bar -->
                 <div class="search-bar d-flex">
-                    <!-- <input class="input-location" name="text" placeholder="Search" type="search"> -->
-                    <input type="text" class="input-location">
+                    <input type="text" class="input-location" minlength="2" maxlength="20">
                     <button class="btn btn-search">Search</button>
                 </div>
-
 
             </div>
 
@@ -82,18 +67,20 @@
                             <div class="next-hour-temperature d-flex">
                                 <img src="/icons/img-thermometer.svg" alt="thermomether image"
                                     class="img img-thermometer">
-                                <span class="current-temperature-deg d-flex">current temperature <span class="celsius-sign">temp
+                                <span class="current-temperature-deg d-flex">current temperature <span
+                                        class="celsius-sign">temp
                                         sign</span></span>
 
                                 <div class="feels-like d-flex">
                                     <span>Feels like</span>
-                                    <span class="feels-like-temperature-deg d-flex">feels like temp <span class="celsius-sign"></span></span>
+                                    <span class="feels-like-temperature-deg d-flex">feels like temp <span
+                                            class="celsius-sign"></span></span>
                                 </div>
 
                             </div>
 
                             <div class="next-hour-precipitation d-flex">
-                               <img src="/icons/img-umbrella.svg" alt="umbrella image" class="img">
+                                <img src="/icons/img-umbrella.svg" alt="umbrella image" class="img">
                                 <span class="current-precipitation-mm">current precipitation mm</span>
                                 <span>mm</span>
                             </div>
@@ -151,7 +138,7 @@
 
         </div>
 
-        <!-- Visible if location not found -->
+        <!-- Show if location not found -->
         <div class="not-found">
 
         </div>

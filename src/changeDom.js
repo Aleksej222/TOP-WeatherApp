@@ -250,11 +250,9 @@ function setWeatherIcon(tempText) {
     imgObj.src = imgSrc;
     imgObj.alt = imgAlt;
     
-    // ?? Return object with imgSrc and alt text
     return imgObj;
     
 }
 
-
-// TODO: Set alt text on images
 // TODO: Enable search on 'Enter' key press
+// TODO: Add error handling to the api

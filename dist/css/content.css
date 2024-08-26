@@ -4,6 +4,7 @@
     margin-left: auto;
     margin-right: auto;
     padding-top: 2.8em;
+    padding-bottom: .5em;
     display: grid;
     grid-template-columns: 60% 40%;
     
@@ -11,18 +12,29 @@
     border: 3px solid green;
 }
 
+.about-location {
+    align-self: center;
+}
+
 .search-bar {
-    align-items: flex-start;
+    align-items: center;
     justify-content: flex-end;
 }
+
+/* TODO: Style input and btn */
 
 .input-location {
     /* font-size: 1.2rem; */
     padding: .8em;
+    /* border-radius: 7px; */
+    /* font-size: 1.2rem; */
+    /* padding: .1em 0; */
 }
 
 .btn-search {
     padding: .8em 1em;
+    outline: none;
+    cursor: pointer;
 }
 
 .condition-tables {

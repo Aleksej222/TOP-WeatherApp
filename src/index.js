@@ -15,12 +15,22 @@ if (btnSendRequest) {
         if (locationInputValid) {
             
             // Only returns 3 days
-            let responseObj = await getRequestObj('forecast.json', locationInput.value, 5);
+            getRequestObj('forecast.json', locationInput.value, 5)
+            .then(data => {
+                // ** Location found
+                changeDom(data);
+            })
+            .catch(err => {
+                // ** Error, display error page
+                console.log(err);
+
+                // showErrorPage()
+            })
 
             locationInput.value = '';  // ** Set input field to blank 
             // console.log(responseObj);
 
-            changeDom(responseObj);
+            
             
         }
     })

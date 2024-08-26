@@ -15,4 +15,4 @@ export async function getRequestObj(apiMethod, location, days = 0) {
     let responseObj = await response.json();
 
     return responseObj;
-}
+}   

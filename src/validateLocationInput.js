@@ -13,7 +13,7 @@ export function validateLocationInput(locationInput) {
 
 function stringIsValid(str) {
     
-    var regex = /^[a-zA-Z]+$/;
+    const regex = /^[a-zA-Z]+$/;
     return regex.test(str);
     
 }

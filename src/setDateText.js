@@ -1,7 +1,5 @@
 //** Return date format (Today 23 Aug.)   
 export function setDateText(date) {
-    // console.log(date);
-
     let dateText = ''
 
     let dayText = getDayOfTheWeek(date);

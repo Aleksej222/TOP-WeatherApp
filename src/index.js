@@ -3,8 +3,8 @@ import { changeDom } from "./changeDom";
 import { validateLocationInput } from "./validateLocationInput";
 import { showErrorPage } from "./showErrorPage";
 
-let locationInput = document.querySelector('.input-location');
-let btnSendRequest = document.querySelector('.btn-search');
+const locationInput = document.querySelector('.input-location');
+const btnSendRequest = document.querySelector('.btn-search');
 
 if (btnSendRequest) {
 
@@ -40,6 +40,3 @@ function sendRequestOnLoad() {
     
 }
 sendRequestOnLoad();
-
-
-// TODO: Replace let variables with const

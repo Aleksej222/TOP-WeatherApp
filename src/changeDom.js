@@ -6,7 +6,7 @@ export function changeDom(responseObj) {
 
     const contentHtml = document.querySelector('.content');
     if (contentHtml.style.display == 'none') {
-        
+
         contentHtml.style.display = 'block';
     }
 
@@ -19,8 +19,6 @@ export function changeDom(responseObj) {
 
 // ** Set location details (Oslo): Oslo, Norway, 21:30
 function changeLocationDetails(location) {
-    // console.log(location);
-
     let locationName = document.querySelector('.location-name');
     let locationDetails = document.querySelector('.location-details');
 
@@ -30,19 +28,15 @@ function changeLocationDetails(location) {
     
     locationName.innerHTML = location.name;
     locationDetails.innerHTML = locationDetailsStr;
-
 }
 
 // ** Set current condition table details
-function changeCurrentConditions(current) {
-    // console.log(current);
-    
+function changeCurrentConditions(current) { 
     let tempIcon = document.querySelector('.img-current-temp');
 
     let tempText = current.condition.text;
     let imgObj = setWeatherIcon(tempText);
 
-    // console.log(imgObj.src);
     tempIcon.src = imgObj.src;
     tempIcon.alt = imgObj.alt;
     
@@ -55,24 +49,18 @@ function changeCurrentConditions(current) {
     feelsLikeTemp.innerHTML = current.feelslike_c + '&deg';
     currentPrecipitation.innerHTML = current.precip_mm;
     windKpH.innerHTML = current.wind_kph;
-    
 }
 
 // ** Set daily precipitation levels
 function changePrecipitationTable(forecastToday) {
-    // console.log(forecastToday);
-
     let totalPrecipMM = document.querySelector('.total-precip-mm');
 
     let precipitationState = forecastToday.day.totalprecip_mm;
     totalPrecipMM.innerHTML = precipitationState;
-    
 }
 
 // ** Change forecast table details 
 function changeForecastTable(forecast) {
-    // console.log(forecast);
-
     let forecastTable = document.querySelector('.forecast-table');
 
     let forecastList = document.querySelector('.weather-list-content');
@@ -86,9 +74,8 @@ function changeForecastTable(forecast) {
 
     forecast.forEach(day => {
         let forecastItem = createWeatherListItem(day);
-        // console.log(forecastItem);
-
         forecastList.appendChild(forecastItem);
+
     });
     
     forecastTable.appendChild(forecastList);
@@ -96,8 +83,6 @@ function changeForecastTable(forecast) {
 
 // ** Creates html for an item in the forecast table
 function createWeatherListItem(day) {
-    // console.log(day);
-
     let listItem = document.createElement('li');
     listItem.classList.add('weather-list-item');
 
@@ -115,7 +100,7 @@ function createWeatherListItem(day) {
     listSymbolsContainerOl.classList.add('list-forecast-symbols');
     listSymbolsContainerOl.classList.add('d-flex');
 
-    let symbolsArr = ['morning', 'afternoon', 'evening', 'night'];
+    const symbolsArr = ['morning', 'afternoon', 'evening', 'night'];
     
     for (let i = 0; i < symbolsArr.length; i++) {
 
@@ -168,7 +153,6 @@ function createWeatherListItem(day) {
     let itemTempDiv = document.createElement('div');
     itemTempDiv.classList.add('list-item-temperature');
 
-    // TODO: Fix formating later
     let itemTempSpan = document.createElement('span');
     itemTempSpan.innerHTML = day.day.maxtemp_c + '&deg / ' + day.day.mintemp_c + '&deg';
 
@@ -198,18 +182,15 @@ function createWeatherListItem(day) {
     listItem.appendChild(forecastItemDiv);
 
     return listItem;
-
 }
 
 // ** Function that sends image object with src and alt depending on weather condition
 function setWeatherIcon(tempText) {
-    // console.log(tempText);
-
-    let imgObj = {src: '', alt:''};
 
     // Array that contains weather conditions
     const conditionsArr = [['sun', 'sunny'], ['rain', 'rainy'], ['thunder', 'lightning'], ['snow', 'snowing']];
-
+    
+    let imgObj = {src: '', alt:''};
     let imgSrc = '';
     let imgAlt = ''
     let conditionFoundAt = -1;
@@ -257,6 +238,3 @@ function setWeatherIcon(tempText) {
     return imgObj;
     
 }
-
-// TODO: Enable search on 'Enter' key press
-// TODO: Add error handling to the api

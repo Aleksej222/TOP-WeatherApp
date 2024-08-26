@@ -1,6 +1,7 @@
 import { getRequestObj } from "./apiRequest";
 import { changeDom } from "./changeDom";
 import { validateLocationInput } from "./validateLocationInput";
+import { showErrorPage } from "./showErrorPage";
 
 let locationInput = document.querySelector('.input-location');
 let btnSendRequest = document.querySelector('.btn-search');
@@ -22,16 +23,11 @@ if (btnSendRequest) {
             })
             .catch(err => {
                 // ** Error, display error page
-                console.log(err);
-
-                // showErrorPage()
+                showErrorPage();
+                // TODO: Change link to original when done ('forecast.json')
             })
 
-            locationInput.value = '';  // ** Set input field to blank 
-            // console.log(responseObj);
-
-            
-            
+            locationInput.value = '';  // ** Set input field to blank  
         }
     })
 }
@@ -43,13 +39,7 @@ function sendRequestOnLoad() {
     btnSendRequest.click();
     
 }
-
 sendRequestOnLoad();
 
-// TODO: Write error handling (for api calls)
 
- 
-// let responseObj = await getRequestObj('forecast.json', locationInput.value, 5).then(responseObj => {
-//     console.log(responseObj);
-// }
-// );
+// TODO: Replace let variables with const

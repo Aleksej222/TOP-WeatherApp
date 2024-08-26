@@ -4,7 +4,11 @@ import { setDateText } from "./setDateText";
 // ** Function that manipulates DOM
 export function changeDom(responseObj) {
 
-    // console.log(responseObj);
+    const contentHtml = document.querySelector('.content');
+    if (contentHtml.style.display == 'none') {
+        
+        contentHtml.style.display = 'block';
+    }
 
     changeLocationDetails(responseObj.location);
     changeCurrentConditions(responseObj.current);

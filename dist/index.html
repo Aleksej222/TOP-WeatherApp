@@ -19,31 +19,32 @@
     <!-- TODO: Display grid -->
     <div class="container">
 
-        <!-- Default view -->
-        <div class="content">
+        <!-- Header, search bar, location details -->
+        <div class="content-header">
 
-            <div class="content-header">
+            <!-- Location -->
+            <div class="content-location d-flex">
 
-                <!-- Location -->
-                <div class="content-location d-flex">
+                <!-- Yr.no logo -->
+                <img src="/icons/site-logo.svg" alt="site-logo" class="img img-logo">
 
-                    <!-- Yr.no logo -->
-                    <img src="/icons/site-logo.svg" alt="site-logo" class="img img-logo">
-
-                    <div class="about-location d-flex flex-dir-col">
-                        <span class="location-name">Location name</span>
-                        <span class="location-details">Location details</span>
-                    </div>
-
-                </div>
-
-                <!-- Search bar -->
-                <div class="search-bar d-flex">
-                    <input type="text" class="input-location" minlength="2" maxlength="20">
-                    <button class="btn btn-search">Search</button>
+                <div class="about-location d-flex flex-dir-col">
+                    <span class="location-name">Location name</span>
+                    <span class="location-details">Location details</span>
                 </div>
 
             </div>
+
+            <!-- Search bar -->
+            <div class="search-bar d-flex">
+                <input type="text" class="input-location" minlength="2" maxlength="20">
+                <button class="btn btn-search">Search</button>
+            </div>
+
+        </div>
+
+        <!-- Default view -->
+        <div class="content">
 
             <div class="condition-tables d-flex">
 
@@ -141,6 +142,12 @@
         <!-- Show if location not found -->
         <div class="not-found">
 
+                <h1>Location not found</h1>
+                <ul class="not-found-list">
+                    <li>Check that the location name is spelled correctly</li>
+                    <li>Try searching for another location</li>
+                </ul>
+                
         </div>
 
     </div>

@@ -14,28 +14,38 @@
 
 .about-location {
     align-self: center;
+    font-size: 1.2rem;
 }
 
 .search-bar {
     align-items: center;
     justify-content: flex-end;
+    gap: .5em;
 }
 
 /* TODO: Style input and btn */
 
 .input-location {
-    /* font-size: 1.2rem; */
-    padding: .8em;
-    /* border-radius: 7px; */
-    /* font-size: 1.2rem; */
-    /* padding: .1em 0; */
+    font-size: 1.2rem;
+    padding: .5em;
 }
 
 .btn-search {
-    padding: .8em 1em;
+    padding: .5em 1.2em;
+    font-size: 1.2rem;
+    color: #090909;
     outline: none;
     cursor: pointer;
 }
+
+.btn-search:active {
+    color: #666;
+    box-shadow:
+      0px 0px 0px #c5c5c5,
+      0px 0px 0px #ffffff,
+      inset 4px 4px 12px #c5c5c5,
+      inset -4px -4px 12px #ffffff;
+  }
 
 .condition-tables {
     padding: 1em 2em;

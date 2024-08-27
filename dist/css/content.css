@@ -29,6 +29,7 @@
 
 .current-condition {
     width: 55%;
+    height: 65%;
     margin-left: 1.5em;
     border: 3px solid red;
 }
@@ -42,20 +43,39 @@
     align-items: center;
     justify-content: flex-start;
     gap: .5em;
+    padding-top: .3em;
+    padding-left: 1em;
     font-weight: bold;
     font-size: 1.1rem;
 
     background-color: hotpink;
 }
 
-.current-condition-main { 
-    /* height: 100%; */
-    background-color: aqua;
-}
-
 .img-current-temp {
     width: 100px;
     height: 70px;
+}
+
+.current-condition-main { 
+    align-items: center;
+    /* background-color: aqua; */
+}
+
+.next-hour-conditions {
+    align-self: stretch;
+    align-items: center;
+    width: 100%;
+    background-color: aqua;
+}
+
+.current-conditions-num {
+    font-size: 2rem;
+} 
+
+.current-temperature-deg {
+    /* TODO: set color in variable */
+    color: #b21002;
+    color: #1767ce;
 }
 
 .img-current-conditions {
@@ -70,6 +90,7 @@
 
 .precipitation-forecast {
     width: 35%;
+    height: 65%;
     border: 3px solid orange;
 }
 

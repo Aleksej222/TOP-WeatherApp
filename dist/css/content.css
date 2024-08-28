@@ -58,6 +58,7 @@
 
 .current-condition-main { 
     align-items: center;
+    padding-top: .3em;
     /* background-color: aqua; */
 }
 
@@ -72,7 +73,7 @@
     font-size: 2rem;
 } 
 
-.img-current-conditions {
+.img-current-conditions, .img-precipitation  {
     width: 30px;
     height: 30px;
 }
@@ -88,9 +89,20 @@
     border: 3px solid orange;
 }
 
-.precipitation-forecast .img-umbrella {
-    width: 65px;
-    height: 30px;
+.precipitation-forecast-header {
+    font-weight: bold;
+    font-size: 1.1rem;
+    gap: .5em;
+    padding-top: .3em;
+    padding-left: 1em;
+}
+
+.precipitation-forecast-main {
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding-bottom: .3em;
+    font-size: 1.5rem;
 }
 
 .weather-list-header {
@@ -143,9 +155,3 @@
     /* background-color: hotpink; */
 }
 
-.img-forecast {
-    width: 40 !important;
-    height: 40 !important;
-}
-
-/* TODO: Fix width later */

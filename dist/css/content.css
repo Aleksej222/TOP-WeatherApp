@@ -72,12 +72,6 @@
     font-size: 2rem;
 } 
 
-.current-temperature-deg {
-    /* TODO: set color in variable */
-    color: #b21002;
-    color: #1767ce;
-}
-
 .img-current-conditions {
     width: 30px;
     height: 30px;

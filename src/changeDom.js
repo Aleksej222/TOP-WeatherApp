@@ -152,6 +152,7 @@ function createWeatherListItem(day) {
 
     let itemTempDiv = document.createElement('div');
     itemTempDiv.classList.add('list-item-temperature');
+    itemTempDiv.classList.add('color-temperature');
 
     let itemTempSpan = document.createElement('span');
     itemTempSpan.innerHTML = day.day.maxtemp_c + '&deg / ' + day.day.mintemp_c + '&deg';
@@ -161,9 +162,10 @@ function createWeatherListItem(day) {
 
     let itemPrecipDiv = document.createElement('div');
     itemPrecipDiv.classList.add('list-item-precip');
+    itemPrecipDiv.classList.add('color-precipitation');
 
     let itemPrecipSpan = document.createElement('span');
-    itemPrecipSpan.innerHTML = day.day.totalprecip_mm;
+    itemPrecipSpan.innerHTML = day.day.totalprecip_mm + ' mm';
 
     itemPrecipDiv.appendChild(itemPrecipSpan);
     forecastItemDiv.appendChild(itemPrecipDiv);
@@ -172,7 +174,7 @@ function createWeatherListItem(day) {
     itemWindDiv.classList.add('list-item-wind');
 
     let itemWindSpan = document.createElement('span');
-    itemWindSpan.innerHTML = day.day.maxwind_kph;
+    itemWindSpan.innerHTML = day.day.maxwind_kph + ' kp/h';
 
     itemWindDiv.appendChild(itemWindSpan);
     forecastItemDiv.appendChild(itemWindDiv);

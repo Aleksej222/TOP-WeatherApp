@@ -76,7 +76,7 @@
                                     class="img img-current-conditions">
                                 <span class="current-temperature-deg color-temperature current-conditions-num d-flex"></span>
 
-                                <div class="feels-like d-flex">
+                                <div class="temp-feels-like d-flex">
                                     <span>Feels like</span>
                                     <span class="feels-like-temperature-deg color-temperature d-flex"></span>
                                 </div>
@@ -85,15 +85,23 @@
 
                             <div class="next-hour-precipitation color-precipitation d-flex">
                                 <img src="/icons/img-umbrella.svg" alt="umbrella image" class="img img-current-conditions">
-                                <span class="current-precipitation-mm  current-conditions-num"></span>
-                                <span>mm</span>
+
+                                <div class="current-precipitation-container d-flex">
+                                    <span class="current-precipitation-mm  current-conditions-num"></span>
+                                    <span>mm</span>
+                                </div>
+                                
                             </div>
 
                             <div class="next-hour-wind d-flex">
                                 <img src="/icons/img-wind.svg" alt="wind icon" class="img img-current-conditions">
-                                <span class="current-wind-kph current-conditions-num"></span>
-                                <span>kp/h</span>
-                                <img src="/icons/img-arrow.svg" alt="arrow image" class="img img-symbol-wind">
+
+                                <div class="current-wind-container d-flex">
+                                    <span class="current-wind-kph current-conditions-num"></span>
+                                    <span>kp/h</span>
+                                    <img src="/icons/img-arrow.svg" alt="arrow image" class="img img-symbol-wind">
+                                </div>
+                                
                             </div>
 
                         </div>

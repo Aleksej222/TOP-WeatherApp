@@ -28,7 +28,7 @@
 }
 
 .current-condition {
-    width: 55%;
+    width: 58%;
     height: 65%;
     margin-left: 1.5em;
     border: 3px solid red;
@@ -48,7 +48,7 @@
     font-weight: bold;
     font-size: 1.1rem;
 
-    background-color: hotpink;
+    /* background-color: hotpink; */
 }
 
 .img-current-temp {
@@ -65,8 +65,10 @@
 .next-hour-conditions {
     align-self: stretch;
     align-items: center;
+    justify-content: space-evenly;
     width: 100%;
-    background-color: aqua;
+    /* gap: 5.8em; */
+    /* background-color: aqua; */
 }
 
 .current-conditions-num {
@@ -78,13 +80,29 @@
     height: 30px;
 }
 
+.temp-feels-like {
+    align-items: flex-end;
+    gap: .2em;
+}
+
+.current-precipitation-container {
+    padding-left: .2em;
+    align-items: flex-end;
+}
+
+.current-wind-container {
+    padding-left: .3em;
+    align-items: flex-end;
+    gap: .2em;
+}
+
 .img-symbol-wind {
     width: 20px;
     height: 20px;
 }
 
 .precipitation-forecast {
-    width: 35%;
+    width: 32%;
     height: 65%;
     border: 3px solid orange;
 }

@@ -24,7 +24,6 @@ if (btnSendRequest) {
             .catch(err => {
                 // ** Error, display error page
                 showErrorPage();
-                // TODO: Change link to original when done ('forecast.json')
             })
 
             locationInput.value = '';  // ** Set input field to blank  

@@ -5,9 +5,12 @@ import { setDateText } from "./setDateText";
 export function changeDom(responseObj) {
 
     const contentHtml = document.querySelector('.content');
+    const errorPage = document.querySelector('.not-found')
+
     if (contentHtml.style.display == 'none') {
 
         contentHtml.style.display = 'block';
+        errorPage.style.display = 'none';
     }
 
     changeLocationDetails(responseObj.location);
@@ -61,11 +64,15 @@ function changePrecipitationTable(forecastToday) {
 
 // ** Change forecast table details 
 function changeForecastTable(forecast) {
-    let forecastTable = document.querySelector('.forecast-table');
+    // let forecastTable = document.querySelector('.forecast-table');
+    let listContainerDiv = document.querySelector('.list-container');
+
+    console.log(listContainerDiv);
 
     let forecastList = document.querySelector('.weather-list-content');
     if (forecastList) {
-        forecastTable.removeChild(forecastList);
+        // forecastTable.removeChild(forecastList);
+        listContainerDiv.removeChild(forecastList);
     }
 
     // ol is used on yr.no
@@ -78,7 +85,8 @@ function changeForecastTable(forecast) {
 
     });
     
-    forecastTable.appendChild(forecastList);
+    // forecastTable.appendChild(forecastList);
+    listContainerDiv.appendChild(forecastList);
 }
 
 // ** Creates html for an item in the forecast table

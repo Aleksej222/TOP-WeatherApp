@@ -11,7 +11,7 @@ export async function getRequestObj(apiMethod, location, days = 0) {
     if (response.status !== 200) {
         throw new Error('Cannot fetch the data');
     }
-
+    
     let responseObj = await response.json();
 
     return responseObj;

@@ -17,7 +17,6 @@ export function changeDom(responseObj) {
     changeCurrentConditions(responseObj.current);
     changePrecipitationTable(responseObj.forecast.forecastday[0]);
     changeForecastTable(responseObj.forecast.forecastday);
-
 }
 
 // ** Set location details (Oslo): Oslo, Norway, 21:30
@@ -64,14 +63,10 @@ function changePrecipitationTable(forecastToday) {
 
 // ** Change forecast table details 
 function changeForecastTable(forecast) {
-    // let forecastTable = document.querySelector('.forecast-table');
     let listContainerDiv = document.querySelector('.list-container');
-
-    console.log(listContainerDiv);
 
     let forecastList = document.querySelector('.weather-list-content');
     if (forecastList) {
-        // forecastTable.removeChild(forecastList);
         listContainerDiv.removeChild(forecastList);
     }
 
@@ -85,7 +80,6 @@ function changeForecastTable(forecast) {
 
     });
     
-    // forecastTable.appendChild(forecastList);
     listContainerDiv.appendChild(forecastList);
 }
 

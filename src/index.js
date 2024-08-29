@@ -22,6 +22,8 @@ if (btnSendRequest) {
                 changeDom(data);
             })
             .catch(err => {
+                console.log(err);
+
                 // ** Error, display error page
                 showErrorPage();
             })

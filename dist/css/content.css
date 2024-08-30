@@ -23,15 +23,22 @@
 
     /* TODO: Change height later (grid on container) */
     height: 200px;
-    border: 3px solid seagreen;
+    border-bottom: 3px solid seagreen;
+    /* border: 3px solid seagreen; */
 
+}
+
+.current-condition, .precipitation-forecast {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0.5px 1px #21292b;
 }
 
 .current-condition {
     width: 58%;
     height: 65%;
     margin-left: 1.5em;
-    border: 3px solid red;
+    /* border: 3px solid red; */
 }
 
 .img-clock {
@@ -104,7 +111,7 @@
 .precipitation-forecast {
     width: 32%;
     height: 65%;
-    border: 3px solid orange;
+    /* border: 3px solid orange; */
 }
 
 .precipitation-forecast-header {

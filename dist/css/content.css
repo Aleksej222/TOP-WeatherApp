@@ -18,7 +18,7 @@
     align-items: center;
 
     /* ?? Maybe remove later */
-    background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(228,228,255,1) 0%, rgba(223,249,255,0.9444152661064426) 100%);
+    /* background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(228,228,255,1) 0%, rgba(223,249,255,0.9444152661064426) 100%); */
     /* background-color: #ADD8E6; */
 
     /* TODO: Change height later (grid on container) */

@@ -30,6 +30,7 @@ body {
     padding: 0;
     height: 100%;
     font-family: 'Source Code Pro', monospace;
+    background: linear-gradient(180deg, white 5%, #c2ffff 95%);
 }
 
 .container {

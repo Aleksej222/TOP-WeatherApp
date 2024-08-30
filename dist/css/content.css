@@ -23,12 +23,12 @@
 
     /* TODO: Change height later (grid on container) */
     height: 200px;
-    border-bottom: 3px solid seagreen;
+    
     /* border: 3px solid seagreen; */
 
 }
 
-.current-condition, .precipitation-forecast {
+.current-condition, .precipitation-forecast, .forecast-table {
     background-color: white;
     border-radius: 10px;
     box-shadow: 0.5px 1px #21292b;
@@ -132,16 +132,18 @@
 
 .weather-list-header {
     display: grid;
-    /* ?? Maybe better to use '%' */
     grid-template-columns: 1fr 3fr 3fr;
     grid-template-rows: 1fr;
     grid-template-areas: ". forecast-symbol-header forecast-condition-header";
     margin-top: 1em;
-
-    border: 3px solid black;
+    /* gap: 1.5em; */
+    border-bottom: 2px solid grey;
+    /* border: 3px solid black; */
 }
 
 .forecast-symbol-header {
+    display: flex;
+    justify-content: space-between;
     grid-area: forecast-symbol-header;
 }
 
@@ -150,6 +152,7 @@
 }
 
 .weather-list-content {
+    /* margin-top: -.1em; */
     padding-left: 0;
     list-style-type: none;
 }
@@ -162,18 +165,36 @@
     grid-template-columns: 1fr 3fr 3fr;
     grid-template-rows: 1fr;
     grid-template-areas: "forecast-date forecast-symbol-content forecast-condition-content";
-    border: 3px solid orange;
+    border-bottom: 1px solid black;
+    /* border: 3px solid orange; */
 }
 
 .list-item-date {
     grid-area: forecast-date;
+    padding-left: .5em;
+    display: flex;
+    align-items: center;
     /* background-color: lime !important; */
 }
 
 .list-forecast-symbols {
+    padding: 0;
     list-style-type: none;
     grid-area: forecast-symbol-content;
-    /* background-color: blueviolet; */
+}
+
+.forecast-symbol-header, .list-forecast-symbols {
+    display: flex;
+    justify-content: space-between;
+}
+
+.forecast-condition-header, .list-forecast-item {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    /* padding-left: .1em; */
+
+    /* background-color: lightgreen; */
 }
 
 .list-forecast-item {

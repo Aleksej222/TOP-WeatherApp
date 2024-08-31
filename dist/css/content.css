@@ -137,7 +137,7 @@
     grid-template-areas: ". forecast-symbol-header forecast-condition-header";
     margin-top: 1em;
     /* gap: 1.5em; */
-    border-bottom: 2px solid grey;
+    border-bottom: 1px solid #21292b;
     /* border: 3px solid black; */
 }
 
@@ -164,9 +164,13 @@
     grid-template-columns: 1fr 3fr 3fr;
     grid-template-rows: 1fr;
     grid-template-areas: "forecast-date forecast-symbol-content forecast-condition-content";
-    border-bottom: 1px solid black;
-    /* border: 3px solid orange; */
+    border-bottom: 1px solid #21292b;
 }
+
+.weather-list-item:last-child {
+    border: none;
+}
+
 
 .list-item-date {
     grid-area: forecast-date;
@@ -210,3 +214,6 @@
     width: 30%;
     text-align: center;
 }
+
+
+/* TODO: Fix font size */

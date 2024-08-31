@@ -18,8 +18,7 @@
 </head>
 
 <body>
-    <!-- TODO: Display grid -->
-    <div class="container">
+    <div class="container d-flex flex-dir-col">
 
         <!-- Header, search bar, location details -->
         <div class="content-header">
@@ -27,10 +26,10 @@
             <!-- Location -->
             <div class="content-location d-flex">
 
-              <div class="img-container">
-                  <!-- Yr.no logo -->
-                  <img src="/icons/site-logo.svg" alt="site-logo" class="img img-logo">
-              </div>
+                <div class="img-container">
+                    <!-- Yr.no logo -->
+                    <img src="/icons/site-logo.svg" alt="site-logo" class="img img-logo">
+                </div>
 
                 <div class="about-location d-flex flex-dir-col">
                     <span class="location-name">Location name</span>
@@ -64,9 +63,7 @@
                     <div class="current-condition-main d-flex">
 
                         <div class="next-hour-temperature-icon">
-                            <!-- TODO: Replace image later -->
-                            <img src="" alt="current temperature image"
-                                class="img img-current-temp">
+                            <img src="" alt="current temperature image" class="img img-current-temp">
                         </div>
 
                         <div class="next-hour-conditions d-flex">
@@ -74,7 +71,8 @@
                             <div class="next-hour-temperature d-flex">
                                 <img src="/icons/img-thermometer.svg" alt="thermomether image"
                                     class="img img-current-conditions">
-                                <span class="current-temperature-deg color-temperature current-conditions-num d-flex"></span>
+                                <span
+                                    class="current-temperature-deg color-temperature current-conditions-num d-flex"></span>
 
                                 <div class="temp-feels-like d-flex">
                                     <span>Feels like</span>
@@ -84,13 +82,14 @@
                             </div>
 
                             <div class="next-hour-precipitation color-precipitation d-flex">
-                                <img src="/icons/img-umbrella.svg" alt="umbrella image" class="img img-current-conditions">
+                                <img src="/icons/img-umbrella.svg" alt="umbrella image"
+                                    class="img img-current-conditions">
 
                                 <div class="current-precipitation-container d-flex">
                                     <span class="current-precipitation-mm  current-conditions-num"></span>
                                     <span>mm</span>
                                 </div>
-                                
+
                             </div>
 
                             <div class="next-hour-wind d-flex">
@@ -101,7 +100,7 @@
                                     <span>kp/h</span>
                                     <img src="/icons/img-arrow.svg" alt="arrow image" class="img img-symbol-wind">
                                 </div>
-                                
+
                             </div>
 
                         </div>
@@ -126,7 +125,6 @@
 
             </div>
 
-            <!-- ?? plan css, use grid system -->
             <div class="forecast-table d-flex flex-dir-col">
 
                 <div class="weather-list-header">
@@ -153,7 +151,7 @@
                 </div>
 
                 <div class="list-container">
-                    
+
                 </div>
 
             </div>
@@ -163,12 +161,12 @@
         <!-- Show if location not found -->
         <div class="not-found">
 
-                <h1>Location not found</h1>
-                <ul class="not-found-list">
-                    <li>Check that the location name is spelled correctly</li>
-                    <li>Try searching for another location</li>
-                </ul>
-                
+            <h1>Location not found</h1>
+            <ul class="not-found-list">
+                <li>Check that the location name is spelled correctly</li>
+                <li>Try searching for another location</li>
+            </ul>
+            
         </div>
 
     </div>

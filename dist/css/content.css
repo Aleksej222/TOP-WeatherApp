@@ -157,7 +157,6 @@
     list-style-type: none;
 }
 
-/* TODO: Fix margin/padding */
 .weather-list-item {
     padding: 0;
     margin: 0;
@@ -202,3 +201,12 @@
     /* background-color: hotpink; */
 }
 
+.forecast-temp, .list-item-temperature {
+    width: 40%;
+    text-align: center;
+}
+
+.forecast-precip, .forecast-wind, .list-item-precip, .list-item-wind {
+    width: 30%;
+    text-align: center;
+}

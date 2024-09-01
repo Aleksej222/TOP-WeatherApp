@@ -1,0 +1,23 @@
+@media screen and (max-width: 1550px) {
+
+    .content-header, .content  {
+        width: 85%;
+    }
+    
+}
+
+@media screen and (max-width: 1350px) {
+
+    .content-header, .content  {
+        width: 100%;
+    }
+    
+    .content-location, .current-condition, .forecast-table {
+        margin-left: 1.2em;
+    }
+
+    .search-bar, .precipitation-forecast, .forecast-table {
+        margin-right: 1.2em;
+    }
+    
+}

@@ -55,6 +55,11 @@
         padding: .4em 1em;
     }
 
+    .current-condition,
+    .precipitation-forecast {
+        width: 80%;
+    }
+
     .current-condition-header,
     .precipitation-forecast-header,
     .forecast-table {
@@ -64,4 +69,10 @@
     .current-conditions-num {
         font-size: 1.5rem;
     }
+}
+
+@media screen and (max-width: 750px) {
+
+    /* TODO: Header, content, table */
+
 }

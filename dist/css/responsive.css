@@ -1,21 +1,27 @@
 @media screen and (max-width: 1550px) {
 
-    .content-header, .content  {
+    .content-header,
+    .content {
         width: 85%;
     }
 }
 
 @media screen and (max-width: 1350px) {
 
-    .content-header, .content  {
+    .content-header,
+    .content {
         width: 100%;
     }
-    
-    .content-location, .current-condition, .forecast-table {
+
+    .content-location,
+    .current-condition,
+    .forecast-table {
         margin-left: 1.2em;
     }
 
-    .search-bar, .precipitation-forecast, .forecast-table {
+    .search-bar,
+    .precipitation-forecast,
+    .forecast-table {
         margin-right: 1.2em;
     }
 }
@@ -29,9 +35,33 @@
         align-items: center;
     }
 
-    .current-condition, .precipitation-forecast {
+    .current-condition,
+    .precipitation-forecast {
         height: 45%;
         width: 70%;
         margin: .1em 1em;
+    }
+}
+
+@media screen and (max-width: 980px) {
+
+    .input-location {
+        font-size: 1.1rem;
+        padding: .4em;
+    }
+
+    .btn-search {
+        font-size: 1.1rem;
+        padding: .4em 1em;
+    }
+
+    .current-condition-header,
+    .precipitation-forecast-header,
+    .forecast-table {
+        font-size: 1rem;
+    }
+
+    .current-conditions-num {
+        font-size: 1.5rem;
     }
 }

@@ -138,16 +138,35 @@
 
     .list-item-date {
         grid-area: forecast-date;
+        padding-top: .5em;
     }
 
     .list-forecast-item {
         grid-area: forecast-conditions;
         flex-direction: column;
+        justify-self: flex-start;
+        align-items: flex-start;
+        row-gap: .2em;
+        width: 100%;
+    }
+    
+    .list-forecast-item div {
+        width: 100%;
+        text-align: left;
+        padding-left: 0.5em;
+    }
+
+    .list-forecast-item div:first-child {
+        padding-top: .5em;
+    }
+
+    .list-forecast-item div:last-child {
+        padding-bottom: 1em;
     }
 
     .list-forecast-symbols {
         grid-area: forecast-state-img;
         padding-left: 1.8em;
+        padding-top: .5em;
     }
-
 }

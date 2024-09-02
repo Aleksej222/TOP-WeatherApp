@@ -2,7 +2,6 @@
     margin: 0 auto;
     justify-content: center;
     width: 75%;
-    /* border: 3px solid red; */
 }
 
 .condition-tables {
@@ -10,7 +9,6 @@
     align-items: center;
     margin-top: 3.5em;
     height: 200px;
-    /* border: 3px solid seagreen; */
 }
 
 .current-condition,
@@ -25,7 +23,6 @@
     width: 58%;
     height: 65%;
     margin-left: 1.5em;
-    /* border: 3px solid red; */
 }
 
 .img-clock {
@@ -41,7 +38,6 @@
     padding-left: 1em;
     font-weight: bold;
     font-size: 1.1rem;
-    /* background-color: hotpink; */
 }
 
 .img-current-temp {
@@ -52,7 +48,6 @@
 .current-condition-main {
     align-items: center;
     padding-top: .3em;
-    /* background-color: aqua; */
 }
 
 .next-hour-conditions {
@@ -60,7 +55,6 @@
     align-items: center;
     justify-content: space-evenly;
     width: 100%;
-    /* background-color: aqua; */
 }
 
 .current-conditions-num {
@@ -97,7 +91,11 @@
 .precipitation-forecast {
     width: 32%;
     height: 65%;
-    /* border: 3px solid orange; */
+}
+
+.forecast-table {
+    margin-top: 2.5em;
+    font-size: 1.1rem;
 }
 
 .precipitation-forecast-header {
@@ -116,9 +114,9 @@
     font-size: 1.5rem;
 }
 
-.forecast-table {
-    margin-top: 2.5em;
-    font-size: 1.1rem;
+.img-forecast-table {
+    width: 50px;
+    height: 50px;
 }
 
 .weather-list-header {
@@ -165,7 +163,6 @@
     display: flex;
     align-items: center;
     font-weight: bold;
-    /* background-color: lime !important; */
 }
 
 .list-forecast-symbols {
@@ -185,12 +182,10 @@
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    /* background-color: lightgreen; */
 }
 
 .list-forecast-item {
     grid-area: forecast-condition-content;
-    /* background-color: hotpink; */
 }
 
 .forecast-temp,

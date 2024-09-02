@@ -71,8 +71,79 @@
     }
 }
 
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 770px) {
 
-    /* TODO: Header, content, table */
+    .about-location {
+        font-size: 1.1rem;
+    }
+
+    .input-location,
+    .btn-search {
+        font-size: 1rem;
+    }
+
+    .img-current-conditions {
+        width: 25px;
+        height: 25px;
+    }
+
+    .next-hour-conditions {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-left: 1em;
+    }
+
+    .next-hour-temperature-icon,
+    .next-hour-conditions {
+        width: 45%;
+    }
+
+    .current-conditions-num {
+        font-size: 1.2rem;
+    }
+
+    .precipitation-forecast-main {
+        font-size: 1.3rem;
+    }
+
+    .weather-list-header {
+        grid-template-columns: 35% 65%;
+        grid-template-areas: ". forecast-state-header";
+    }
+
+    .forecast-symbol-header {
+        grid-area: forecast-state-header;
+        padding-left: 1.8em;
+        gap: 1.5em;
+    }
+
+    .forecast-symbol-header span {
+        width: 25%;
+    }
+
+    .forecast-condition-header {
+        display: none;
+    }
+
+    .weather-list-item {
+        grid-template-columns: 35% 60%;
+        grid-template-areas:
+            "forecast-date forecast-state-img"
+            "forecast-conditions forecast-state-img";
+    }
+
+    .list-item-date {
+        grid-area: forecast-date;
+    }
+
+    .list-forecast-item {
+        grid-area: forecast-conditions;
+        flex-direction: column;
+    }
+
+    .list-forecast-symbols {
+        grid-area: forecast-state-img;
+        padding-left: 1.8em;
+    }
 
 }

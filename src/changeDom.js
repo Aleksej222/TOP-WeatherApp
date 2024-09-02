@@ -112,7 +112,7 @@ function createWeatherListItem(day) {
 
         // let listSymbolImg = document.createElement('image');
         let listSymbolImg = new Image(40, 40);
-        listSymbolImg.classList.add('img');
+        listSymbolImg.classList.add('img-forecast-table');
         listSymbolImg.classList.add('img-forecast');
 
         let conditionText = '';

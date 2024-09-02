@@ -106,6 +106,10 @@
         font-size: 1.3rem;
     }
 
+    .forecast-table {
+        margin-bottom: 2.5em;
+    }
+
     .weather-list-header {
         grid-template-columns: 35% 65%;
         grid-template-areas: ". forecast-state-header";

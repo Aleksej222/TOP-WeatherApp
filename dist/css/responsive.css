@@ -223,9 +223,87 @@
         font-size: .9rem;
         width: fit-content;
     }    
-
 }
 
 @media screen and (max-width: 350px) {
 
+    .content-location {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .img-logo {
+        width: 80px;
+    }
+    
+    .search-bar {
+        flex-direction: column;
+        width: 100%;
+        justify-content: flex-start;
+    }
+
+    .input-location {
+        width: 100%;
+    }
+
+    .btn-search {
+        font-size: 1.1rem;
+        align-self: flex-end;
+        margin-right: .5em;
+    }
+
+    .current-condition {
+        height: fit-content;
+    }
+
+    .current-condition-header,
+    .precipitation-forecast-header
+    {
+        font-size: .9rem;
+    }
+
+    .img-clock {
+        width: 18px;
+        height: 18px;
+    }
+    
+    .next-hour-temperature-icon {
+        width: fit-content;
+    }
+
+    .img-current-temp {
+        width: 50px;
+        height: 50px;
+    }
+
+    .next-hour-conditions {
+        width: 100%;
+        font-size: .9rem;
+        gap: .5em;
+    }
+
+    .img-current-conditions {
+        width: 20px;
+        height: 20px;
+    }
+
+    .current-conditions-num {
+        font-size: 1rem;
+    }
+
+    .next-hour-temperature {
+        flex-direction: column;
+        gap: .3em;
+    }
+
+    .img-precipitation {
+        width: 22px;
+        height: 22px;
+    }
+
+    .precipitation-forecast-main {
+        font-size: 1.1rem;
+    }
+
+    /* ?? Set first grid to one column */
 }

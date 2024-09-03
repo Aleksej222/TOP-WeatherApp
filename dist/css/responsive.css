@@ -296,6 +296,10 @@
         gap: .3em;
     }
 
+    .next-hour-wind {
+        padding-bottom: .7em;
+    }
+
     .img-precipitation {
         width: 22px;
         height: 22px;
@@ -305,5 +309,30 @@
         font-size: 1.1rem;
     }
 
-    /* ?? Set first grid to one column */
+    .weather-list-header {
+        grid-template-columns: 100%;
+        grid-template-areas: "forecast-state-header";
+    }
+
+    .forecast-symbol-header {
+        grid-area: forecast-state-header;
+        font-size: .8rem;
+    }
+
+    .list-forecast-symbols {
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
 }
+
+
+
+/* TODO: 250px */
+/* 
+    / d-flex on forecast header, flex-wrap
+    .weather-list-item {
+        display: flex;
+        flex-direction: column;
+    }
+
+*/

@@ -45,6 +45,11 @@
 
 @media screen and (max-width: 980px) {
 
+    .content-header {
+        display: flex;
+        justify-content: space-around;
+    }
+
     .input-location {
         font-size: 1.1rem;
         padding: .4em;
@@ -111,17 +116,16 @@
     }
 
     .weather-list-header {
-        grid-template-columns: 35% 65%;
+        grid-template-columns: 30% 70%;
         grid-template-areas: ". forecast-state-header";
     }
 
     .forecast-symbol-header {
         grid-area: forecast-state-header;
-        padding-left: 1.8em;
         gap: 1.5em;
     }
 
-    .forecast-symbol-header span {
+    .forecast-symbol-header span, .list-forecast-symbol {
         width: 25%;
     }
 
@@ -130,7 +134,7 @@
     }
 
     .weather-list-item {
-        grid-template-columns: 35% 60%;
+        grid-template-columns: 30% 70%;
         grid-template-areas:
             "forecast-date forecast-state-img"
             "forecast-conditions forecast-state-img";
@@ -166,7 +170,15 @@
 
     .list-forecast-symbols {
         grid-area: forecast-state-img;
-        padding-left: 1.8em;
         padding-top: .5em;
     }
+
+    .list-forecast-symbol img {
+        margin-left: .8em;
+    }
+}
+
+@media screen and (max-width: 100px) {
+
+  
 }

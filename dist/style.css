@@ -42,7 +42,6 @@ body {
     padding-bottom: .5em;
     display: grid;
     grid-template-columns: 60% 40%;
-    /* border: 3px solid green; */
 }
 
 .img-logo {

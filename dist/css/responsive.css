@@ -115,8 +115,12 @@
         margin-bottom: 2.5em;
     }
 
-    .weather-list-header {
+    .weather-list-header,
+    .weather-list-item {
         grid-template-columns: 30% 70%;
+    }
+
+    .weather-list-header {
         grid-template-areas: ". forecast-state-header";
     }
 
@@ -125,7 +129,8 @@
         gap: 1.5em;
     }
 
-    .forecast-symbol-header span, .list-forecast-symbol {
+    .forecast-symbol-header span,
+    .list-forecast-symbol {
         width: 25%;
     }
 
@@ -134,7 +139,6 @@
     }
 
     .weather-list-item {
-        grid-template-columns: 30% 70%;
         grid-template-areas:
             "forecast-date forecast-state-img"
             "forecast-conditions forecast-state-img";
@@ -153,7 +157,7 @@
         row-gap: .2em;
         width: 100%;
     }
-    
+
     .list-forecast-item div {
         width: 100%;
         text-align: left;
@@ -178,7 +182,50 @@
     }
 }
 
-@media screen and (max-width: 100px) {
+@media screen and (max-width: 530px) {
 
-  
+    .content-header {
+        flex-direction: column;
+        gap: 1.5em;
+    }
+
+    .search-bar {
+        justify-content: center;
+    }
+
+    .current-condition, .precipitation-forecast {
+        width: 100%;
+    }
+
+    .next-hour-temperature-icon {
+        width: 30%;
+    }
+
+    .next-hour-conditions {
+        width: 70%;
+    }
+
+    .precipitation-forecast-main {
+        font-size: 1.2rem;
+    }
+
+    .forecast-table {
+        width: 100%;
+        margin: 2em 0;
+    }
+
+    .forecast-symbol-header {
+        gap: 0;
+    }
+
+    .forecast-symbol-header span,
+    .list-forecast-symbol {
+        font-size: .9rem;
+        width: fit-content;
+    }    
+
+}
+
+@media screen and (max-width: 350px) {
+
 }

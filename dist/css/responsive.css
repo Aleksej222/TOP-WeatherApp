@@ -193,7 +193,8 @@
         justify-content: center;
     }
 
-    .current-condition, .precipitation-forecast {
+    .current-condition,
+    .precipitation-forecast {
         width: 100%;
     }
 
@@ -222,7 +223,7 @@
     .list-forecast-symbol {
         font-size: .9rem;
         width: fit-content;
-    }    
+    }
 }
 
 @media screen and (max-width: 350px) {
@@ -235,7 +236,7 @@
     .img-logo {
         width: 80px;
     }
-    
+
     .search-bar {
         flex-direction: column;
         width: 100%;
@@ -257,8 +258,7 @@
     }
 
     .current-condition-header,
-    .precipitation-forecast-header
-    {
+    .precipitation-forecast-header {
         font-size: .9rem;
     }
 
@@ -266,7 +266,7 @@
         width: 18px;
         height: 18px;
     }
-    
+
     .next-hour-temperature-icon {
         width: fit-content;
     }
@@ -325,14 +325,27 @@
     }
 }
 
+@media screen and (max-width: 250px) {
 
+    .current-condition-main {
+        flex-direction: column;
+    }
 
-/* TODO: 250px */
-/* 
-    / d-flex on forecast header, flex-wrap
+    .precipitation-forecast {
+        margin-top: 2.5em;
+    }
+
+    .precipitation-forecast-main {
+        padding-top: 1em;
+    }
+
+    .forecast-symbol-header {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
     .weather-list-item {
         display: flex;
         flex-direction: column;
     }
-
-*/
+}

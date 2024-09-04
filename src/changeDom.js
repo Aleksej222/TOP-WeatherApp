@@ -240,5 +240,4 @@ function setWeatherIcon(tempText) {
     imgObj.alt = imgAlt;
     
     return imgObj;
-    
 }

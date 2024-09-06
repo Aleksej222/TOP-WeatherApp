@@ -19,11 +19,12 @@ The Weather App is a simple, user-friendly application that allows users to chec
 - CSS
 - JavaScript
 <br>
+
+[Live App](https://aleksej222.github.io/TOP-WeatherApp/)
 <br>
 
-Live App (link)
-
 ![Alt text](https://raw.githubusercontent.com/Aleksej222/TOP-WeatherApp/master/AppScreenshots/AppScreenshot.png "App screenshot")
+
 
 
 

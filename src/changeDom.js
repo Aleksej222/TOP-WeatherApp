@@ -207,31 +207,31 @@ function setWeatherIcon(tempText) {
 
         case 0:  
             // sunny
-            imgSrc = '/icons/weather-conditions/sunny.svg';
+            imgSrc = './icons/weather-conditions/sunny.svg';
             imgAlt = 'Image of the sun';
             break;
 
         case 1:
             // rain
-            imgSrc = '/icons/weather-conditions/rain.svg';
+            imgSrc = './icons/weather-conditions/rain.svg';
             imgAlt = 'Image of the rain';
             break;
 
         case 2:
             // thunder
-            imgSrc = '/icons/weather-conditions/thunder.svg';
+            imgSrc = './icons/weather-conditions/thunder.svg';
             imgAlt = 'Image of the thunder';
             break;
 
         case 3:
             // snow
-            imgSrc = '/icons/weather-conditions/snow.svg';
+            imgSrc = './icons/weather-conditions/snow.svg';
             imgAlt = 'Image of the snow';
             break;
 
         default:
             // cloudy
-            imgSrc = '/icons/weather-conditions/cloudy.svg';
+            imgSrc = './icons/weather-conditions/cloudy.svg';
             imgAlt = 'Image of the cloud';
             break;
     }
